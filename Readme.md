@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [Владимир Казорин](https://up.htmlacademy.ru/htmlcss/25/user/912955).
-* Наставник: `Неизвестно`.
+* Наставник: [Максим Кузнецов](https://htmlacademy.ru/profile/maxkuznetsov).
 
 ---
 
