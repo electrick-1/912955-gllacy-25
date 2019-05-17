@@ -9,14 +9,33 @@
       <nav class="main-navigation">
         <img src="img/logo.svg" width="154" height="64" alt="Логотип Gllacy Shop">
         <ul class="site-navigation">
-          <li><a href="catalog.html">Каталог</a></li>
+          <li>
+            <a href="#">Каталог</a>
+            <ul class="drop-down-menu">
+              <li class="new-in-catalog">
+                <a href="#">Новинки</a>
+              </li>
+              <li>
+                <a href="catalog.html">Сливочное</a>
+              </li>
+              <li>
+                <a href="#">Щербеты</a>
+              </li>
+              <li>
+                <a href="#">Фруктовый лед</a>
+              </li>
+              <li>
+                <a href="#">Мелорин</a>
+              </li>
+            </ul>
+          </li>
           <li><a href="#">Доставка и оплата</a></li>
           <li><a href="#">О компании</a></li>
         </ul>
       </nav>
       <a href="#" class="search-link">Поиск</a>
       <a href="#" class="login-link">Вход</a>
-      <a href="#" class="buy-link">Корзина</a>
+      <a href="#" class="buy-link">Пусто</a>
       <div class="contaсt-info">
         <p class="info-time">С 10 до 20, ежедневно</p>
         <p class="info-number">8 812 450-25-25</p>
@@ -25,9 +44,12 @@
 
     <main class="container">
       <div class="slider">
-        <input type="radio" name="slider" checked>
-        <input type="radio" name="slider">
-        <input type="radio" name="slider">
+        <label class="visually-hidden" for="slide-1">Первый слайд</label>
+        <input class="visually-hidden" type="radio" name="slider" id="slide-1" checked>
+        <label class="visually-hidden" for="slide-2">Второй слайд</label>
+        <input class="visually-hidden" type="radio" name="slider" id="slide-2">
+        <label class="visually-hidden" for="slide-3">третий слайд</label>
+        <input class="visually-hidden" type="radio" name="slider" id="slide-3">
         <!-- Посмотрел макет, лучше будет сделать с помощью скрипта, смену заднего фона при выборе определенного пункта radio -->
       </div>
 
@@ -42,40 +64,43 @@
         <a href="#" class="button">Хочу шоколадки!</a>
       </div>
 
-      <ul class="catalog-list">
-        <li class="catalog-item">
-          <article>
-            <img src="img/catalog-item-1.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
-            <span class="price">310&#x20bd;</span>
-            <span class="weight">/кг</span>
-            <a href=#><h2>Сливочное с апельсиновым джемом и цитрусовой стружкой</h2></a>
-          </article>
-        </li>
-        <li class="catalog-item">
-          <article>
-            <img src="img/catalog-item-2.jpg" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
-            <span class="price">380&#x20bd;</span>
-            <span class="weight">/кг</span>
-            <a href=#><h2>Сливочно-кофейное с кусочками шоколада</h2></a>
-          </article>
-        </li>
-        <li class="catalog-item">
-          <article>
-            <img src="img/catalog-item-3.jpg" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
-            <span class="price">355&#x20bd;</span>
-            <span class="weight">/кг</span>
-            <a href=#><h2>Сливочно-клубничное с присыпкой из белого шоколада</h2></a>
-          </article>
-        </li>
-        <li class="catalog-item">
-          <article>
-            <img src="img/catalog-item-4.jpg" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
-            <span class="price">415&#x20bd;</span>
-            <span class="weight">/кг</span>
-            <a href=#><h2>Сливочное крем-брюле с карамельной подливкой</h2></a>
-          </article>
-        </li>
-      </ul>
+      <section class="hits">
+        <h2 class="visually-hidden">Хиты продаж</h2>
+        <ul class="catalog-list">
+          <li class="catalog-item">
+            <article>
+              <img src="img/catalog-item-1.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+              <span class="price">310&#x20bd;</span>
+              <span class="weight">/кг</span>
+              <a href=#><h2>Сливочное с апельсиновым джемом и цитрусовой стружкой</h2></a>
+            </article>
+          </li>
+          <li class="catalog-item">
+            <article>
+              <img src="img/catalog-item-2.jpg" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
+              <span class="price">380&#x20bd;</span>
+              <span class="weight">/кг</span>
+              <a href=#><h2>Сливочно-кофейное с кусочками шоколада</h2></a>
+            </article>
+          </li>
+          <li class="catalog-item">
+            <article>
+              <img src="img/catalog-item-3.jpg" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
+              <span class="price">355&#x20bd;</span>
+              <span class="weight">/кг</span>
+              <a href=#><h2>Сливочно-клубничное с присыпкой из белого шоколада</h2></a>
+            </article>
+          </li>
+          <li class="catalog-item">
+            <article>
+              <img src="img/catalog-item-4.jpg" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
+              <span class="price">415&#x20bd;</span>
+              <span class="weight">/кг</span>
+              <a href=#><h2>Сливочное крем-брюле с карамельной подливкой</h2></a>
+            </article>
+          </li>
+        </ul>
+      </section>
 
       <h1 class="visually-hidden">Магазин мороженого Gllacy Shop</h1>
       <section class="about-us">
@@ -95,12 +120,13 @@
       </article>
       <div class="mailing">
         <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-        <!-- Здесь будет форма отправки -->
-        <!-- Здесь будет кнопка "Отправить" -->
+        <label class="visually-hidden" for="email-form">Поле для ввода эектронной почты</label>
+        <input type="email" name="email" id="email-form" placeholder="Электронная почта">
+        <button class="button" type="submit">Отправить</button>
       </div>
       <section class="map">
         <h2 class="visually-hidden">Как заказать</h2>
-        <img src="img/map.jpg" width="1200" height="430" alt="Карта">
+        <img src="img/map.jpg" width="1200" height="430" alt="Адрес офиса на карте">
         <div class="contact-info">
           <p class="offline-contacts">Адрес главного офиса и офлайн-магазина:
             <br>
@@ -112,7 +138,7 @@
             <br>
             (с 10 до 20 ежедневно)
           </p>
-          <!-- Здесь будет кнопка "Форма обратной связи" -->
+          <a href="#" class="button">Форма обратной связи</a>
         </div>
       </section>
     </main>
@@ -135,5 +161,48 @@
         Сделано в <a class="button" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &#169; 2019
       </p>
     </footer>
+
+    <section class="modal modal-search">
+      <h2 class="visually-hidden">Поиск</h2>
+      <label class="visually-hidden" for="search">Поле поиска</label>
+      <input type="search" name="search" placeholder="что ищем?" id="search">
+    </section>
+
+    <section class="modal modal-login">
+      <h2 class="visually-hidden">Форма входа</h2>
+      <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+        <p>
+          <label class="visually-hidden" for="login-email">Электронная почта</label>
+          <input type="email" name="login-email" placeholder="Электронная почта" id="login-email">
+        </p>
+        <p>
+          <label class="visually-hidden" for="login-password">Пароль</label>
+          <input type="password" name="login-password" placeholder="Пароль" id="login-password">
+        </p>
+        <button class="button" type="submit">Войти</button>
+        <p>
+          <a href="#">Забыли пароль?</a>
+          <a href="#">Новая регистрация</a>
+        </p>
+      </form>
+    </section>
+
+    <section class="modal modal-feedback">
+      <h2>Мы обязательно вам ответим!</h2>
+      <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+        <p>
+          <label class="visually-hidden" for="feedback-name">Как вас зовут?</label>
+          <input type="text" name="feedback-name" placeholder="Как вас зовут?" id="feedback-name">
+        </p>
+        <p>
+          <label class="visually-hidden" for="feedback-email">Ваша потадля ответа?</label>
+          <input type="email" name="feedback-email" placeholder="Ваша потадля ответа?" id="feedback-email">
+        </p>
+        <textarea name="feedback-text" rows="6">Напишите что нибудь...</textarea>
+        <button class="button" type="submit">Отправить</button>
+        <button class="modal-close" type="submit">Закрыть</button>
+      </form>
+    </section>
+
   </body>
 </html>
