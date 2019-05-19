@@ -52,7 +52,40 @@
       </ul>
       <h1 class="page-title">Сливочное мороженое</h1>
 
-      <!-- Здесь будет форма -->
+      <section class="filter-section">
+        <h2 class="visually-hidden">Поиск мороженного по параметрам</h2>
+        <form class="filter-form" action="https://echo.htmlacademy.ru" method="post">
+          <ul class="filter-list">
+            <li class="filter-item">Сортировка:
+              <ul class="drop-down-filter-menu">
+                <li class="filter-item-current">по популярности</li>
+                <li>сначала недорогие</li>
+                <li>сначала дорогие</li>
+                <li>по жирности</li>
+              </ul>
+            </li>
+            <li class="filter-item">
+              <!-- Здесь будет выбор диапазона стоимости -->
+            </li>
+            <li class="filter-item">Жирность:
+              <label><input class="visually-hidden" type="radio" name="fat-content" value="0%">0%</label>
+              <label><input class="visually-hidden" type="radio" name="fat-content" value="<10%" checked>до 10%</label>
+              <label><input class="visually-hidden" type="radio" name="fat-content" value="<30%">до 30%</label>
+              <label><input class="visually-hidden" type="radio" name="fat-content" value=">30%">выше 30%</label>
+            </li>
+            <li class="filter-item">Наполнители:
+              <label><input type="checkbox" name="filler-chocolate" value="chocolate">шоколадные</label>
+              <label><input type="checkbox" name="filler-sugar" value="sugar">сахарные присылки</label>
+              <label><input type="checkbox" name="filler-fruit" value="fruit">фрукты</label>
+              <label><input type="checkbox" name="filler-sirup" value="sirup">сиропы</label>
+              <label><input type="checkbox" name="filler-jam" value="jam">джемы</label>
+            </li>
+            <li class="filter-item">
+              <button class="filter-button" type="submit">Применить</button>
+            </li>
+          </ul>
+        </form>
+      </section>
 
       <ul class="catalog-list">
         <li class="catalog-item">
