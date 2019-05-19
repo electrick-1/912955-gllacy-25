@@ -11,7 +11,26 @@
           <img src="img/logo.svg" width="154" height="64" alt="Логотип Gllacy Shop">
         </a>
         <ul class="site-navigation">
-          <li class="site-navigation-current">Каталог</li>
+          <li>
+            <a class="site-navigation-current" href="#">Каталог</a>
+            <ul class="drop-down-menu">
+              <li class="new-in-catalog">
+                <a href="#">Новинки</a>
+              </li>
+              <li>
+                <a href="catalog.html">Сливочное</a>
+              </li>
+              <li>
+                <a href="#">Щербеты</a>
+              </li>
+              <li>
+                <a href="#">Фруктовый лед</a>
+              </li>
+              <li>
+                <a href="#">Мелорин</a>
+              </li>
+            </ul>
+          </li>
           <li><a href="#">Доставка и оплата</a></li>
           <li><a href="#">О компании</a></li>
         </ul>
@@ -162,7 +181,32 @@
       </p>
     </footer>
 
-    <section class="buy-form">
+    <section class="modal modal-search">
+      <h2 class="visually-hidden">Поиск</h2>
+      <label class="visually-hidden" for="search-field">Поле поиска</label>
+      <input type="search" name="search-field" placeholder="Что ищем?" id="search-field">
+    </section>
+
+    <section class="modal modal-login">
+      <h2 class="visually-hidden">Форма входа</h2>
+      <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+        <p>
+          <label class="visually-hidden" for="login-email-field">Электронная почта</label>
+          <input type="email" name="login-email-field" placeholder="Электронная почта" id="login-email-field">
+        </p>
+        <p>
+          <label class="visually-hidden" for="login-password-field">Пароль</label>
+          <input type="password" name="login-password-field" placeholder="Пароль" id="login-password-field">
+        </p>
+        <button class="button" type="submit">Войти</button>
+        <p>
+          <a href="#">Забыли пароль?</a>
+          <a href="#">Новая регистрация</a>
+        </p>
+      </form>
+    </section>
+
+    <section class="purchases-section">
       <h2 class="visually-hidden">Список товаров в корзине</h2>
       <table>
         <tr class="ordered-item">
