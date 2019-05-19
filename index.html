@@ -48,7 +48,7 @@
         <input class="visually-hidden" type="radio" name="slider" id="slide-1" checked>
         <label for="slide-2"><span class="visually-hidden">Второй слайд</span></label>
         <input class="visually-hidden" type="radio" name="slider" id="slide-2">
-        <label for="slide-3"><span class="visually-hidden">третий слайд</span></label>
+        <label for="slide-3"><span class="visually-hidden">Третий слайд</span></label>
         <input class="visually-hidden" type="radio" name="slider" id="slide-3">
       </div>
 
@@ -119,8 +119,8 @@
       </article>
       <div class="mailing">
         <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-        <label class="visually-hidden" for="email-form">Поле для ввода эектронной почты</label>
-        <input type="email" name="email" id="email-form" placeholder="Электронная почта">
+        <label class="visually-hidden" for="email-field">Поле для ввода эектронной почты</label>
+        <input type="email" name="email-field" id="email-field" placeholder="Электронная почта">
         <button class="button" type="submit">Отправить</button>
       </div>
       <section class="map">
@@ -163,20 +163,20 @@
 
     <section class="modal modal-search">
       <h2 class="visually-hidden">Поиск</h2>
-      <label class="visually-hidden" for="search">Поле поиска</label>
-      <input type="search" name="search" placeholder="что ищем?" id="search">
+      <label class="visually-hidden" for="search-field">Поле поиска</label>
+      <input type="search" name="search-field" placeholder="Что ищем?" id="search-field">
     </section>
 
     <section class="modal modal-login">
       <h2 class="visually-hidden">Форма входа</h2>
       <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
         <p>
-          <label class="visually-hidden" for="login-email">Электронная почта</label>
-          <input type="email" name="login-email" placeholder="Электронная почта" id="login-email">
+          <label class="visually-hidden" for="login-email-field">Электронная почта</label>
+          <input type="email" name="login-email-field" placeholder="Электронная почта" id="login-email-field">
         </p>
         <p>
-          <label class="visually-hidden" for="login-password">Пароль</label>
-          <input type="password" name="login-password" placeholder="Пароль" id="login-password">
+          <label class="visually-hidden" for="login-password-field">Пароль</label>
+          <input type="password" name="login-password-field" placeholder="Пароль" id="login-password-field">
         </p>
         <button class="button" type="submit">Войти</button>
         <p>
@@ -190,16 +190,16 @@
       <h2>Мы обязательно вам ответим!</h2>
       <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
         <p>
-          <label class="visually-hidden" for="feedback-name">Как вас зовут?</label>
-          <input type="text" name="feedback-name" placeholder="Как вас зовут?" id="feedback-name">
+          <label class="visually-hidden" for="feedback-name-field">Как вас зовут?</label>
+          <input type="text" name="feedback-name-field" placeholder="Как вас зовут?" id="feedback-name-field">
         </p>
         <p>
-          <label class="visually-hidden" for="feedback-email">Ваша потадля ответа?</label>
-          <input type="email" name="feedback-email" placeholder="Ваша потадля ответа?" id="feedback-email">
+          <label class="visually-hidden" for="feedback-email-field">Ваша потадля ответа?</label>
+          <input type="email" name="feedback-email-field" placeholder="Ваша почта для ответа?" id="feedback-email-field">
         </p>
         <textarea name="feedback-text" rows="6">Напишите что нибудь...</textarea>
         <button class="button" type="submit">Отправить</button>
-        <button class="modal-close" type="submit">Закрыть</button>
+        <button class="modal-close" type="button">Закрыть</button>
       </form>
     </section>
 
