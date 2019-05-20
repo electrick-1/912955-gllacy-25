@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
   </head>
+
   <body>
     <header class="main-header">
       <nav class="main-navigation">
@@ -57,7 +58,7 @@
         <form class="filter-form" action="https://echo.htmlacademy.ru" method="post">
           <ul class="filter-list">
             <li class="filter-item">
-              <p>Сортировка:</p>
+              <span>Сортировка:</span>
               <ul class="drop-down-filter-menu">
                 <li class="filter-item-current">по популярности</li>
                 <li>сначала недорогие</li>
@@ -66,32 +67,72 @@
               </ul>
             </li>
             <li class="filter-item">
-              <p>Цена: 100 руб. - 500 руб.</p>
+              <span>Цена: 100 руб. - 500 руб.</span>
               <!-- Здесь будет выбор диапазона стоимости -->
             </li>
             <li class="filter-item">
-              <p>Жирность:</p>
-              <input class="visually-hidden" type="radio" name="fat-content" value="0%" id="filter-radio-1">
-              <label for="filter-radio-1">0%</label>
-              <input class="visually-hidden" type="radio" name="fat-content" value="<10%" id="filter-radio-2" checked>
-              <label for="filter-radio-2">до 10%</label>
-              <input class="visually-hidden" type="radio" name="fat-content" value="<30%" id="filter-radio-3">
-              <label for="filter-radio-3">до 30%</label>
-              <input class="visually-hidden" type="radio" name="fat-content" value=">30%" id="filter-radio-4">
-              <label for="filter-radio-4">выше 30%</label>
+              <span>Жирность:</span>
+              <ul class="filter-nested-list">
+                <li class="filter-nested-item">
+                  <p>
+                    <input class="visually-hidden filter-input filter-input-radio" type="radio" name="fat-content" value="0%" id="filter-radio-1">
+                    <label for="filter-radio-1">0%</label>
+                  </p>
+                </li>
+                <li class="filter-nested-item">
+                  <p>
+                    <input class="visually-hidden filter-input filter-input-radio" type="radio" name="fat-content" value="<10%" id="filter-radio-2" checked>
+                    <label for="filter-radio-2">до 10%</label>
+                  </p>
+                </li>
+                <li class="filter-nested-item">
+                  <p>
+                    <input class="visually-hidden filter-input filter-input-radio" type="radio" name="fat-content" value="<30%" id="filter-radio-3">
+                    <label for="filter-radio-3">до 30%</label>
+                  </p>
+                </li>
+                <li class="filter-nested-item">
+                  <p>
+                    <input class="visually-hidden filter-input filter-input-radio" type="radio" name="fat-content" value=">30%" id="filter-radio-4">
+                    <label for="filter-radio-4">выше 30%</label>
+                  </p>
+                </li>
+              </ul>
             </li>
             <li class="filter-item">
-              <p>Наполнители:</p>
-              <input class="visually-hidden" type="checkbox" name="filler-chocolate" value="chocolate" id="filter-checkbox-1">
-              <label for="filter-checkbox-1">шоколадные</label>
-              <input class="visually-hidden" type="checkbox" name="filler-sugar" value="sugar" id="filter-checkbox-2">
-              <label for="filter-checkbox-2">сахарные присылки</label>
-              <input class="visually-hidden" type="checkbox" name="filler-fruit" value="fruit" id="filter-checkbox-3">
-              <label for="filter-checkbox-3">фрукты</label>
-              <input class="visually-hidden" type="checkbox" name="filler-sirup" value="sirup" id="filter-checkbox-4">
-              <label for="filter-checkbox-4">сиропы</label>
-              <input class="visually-hidden" type="checkbox" name="filler-jam" value="jam" id="filter-checkbox-5">
-              <label for="filter-checkbox-5">джемы</label>
+              <span>Наполнители:</span>
+              <ul class="filter-nested-list">
+                <li class="filter-nested-item">
+                  <p>
+                    <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="filler-chocolate" value="chocolate" id="filter-chocolate">
+                    <label for="filter-chocolate">шоколадные</label>
+                  </p>
+                </li>
+                <li class="filter-nested-item">
+                  <p>
+                    <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="filler-sugar" value="sugar" id="filter-sugar">
+                    <label for="filter-sugar">сахарные присылки</label>
+                  </p>
+                </li>
+                <li class="filter-nested-item">
+                  <p>
+                    <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="filler-fruit" value="fruit" id="filter-fruit">
+                    <label for="filter-fruit">фрукты</label>
+                  </p>
+                </li>
+                <li class="filter-nested-item">
+                  <p>
+                    <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="filler-sirup" value="sirup" id="filter-sirup">
+                    <label for="filter-sirup">сиропы</label>
+                  </p>
+                </li>
+                <li class="filter-nested-item">
+                  <p>
+                    <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="filler-jam" value="jam" id="filter-jam">
+                    <label for="filter-jam">джемы</label>
+                  </p>
+                </li>
+              </ul>
             </li>
           </ul>
           <button class="filter-button" type="submit">Применить</button>
