@@ -3,13 +3,16 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
       <nav class="main-navigation">
         <img src="img/logo.svg" width="154" height="64" alt="Логотип Gllacy Shop">
         <ul class="site-navigation">
-          <li>
+          <li class="site-navigation-item">
             <a href="#">Каталог</a>
             <ul class="drop-down-menu">
               <li class="new-in-catalog">
@@ -29,8 +32,8 @@
               </li>
             </ul>
           </li>
-          <li><a href="#">Доставка и оплата</a></li>
-          <li><a href="#">О компании</a></li>
+          <li class="site-navigation-item"><a href="#">Доставка и оплата</a></li>
+          <li class="site-navigation-item"><a href="#">О компании</a></li>
         </ul>
       </nav>
       <a href="#" class="search-link">Поиск</a>
@@ -51,6 +54,8 @@
         <label for="slide-3"><span class="visually-hidden">Третий слайд</span></label>
         <input class="visually-hidden" type="radio" name="slider" id="slide-3">
       </div>
+
+      <h1 class="visually-hidden">Магазин мороженого Gllacy Shop</h1>
 
       <div class="action">
         <h2 class="action-title">Малинка даром!</h2>
@@ -101,10 +106,9 @@
         </ul>
       </section>
 
-      <h1 class="visually-hidden">Магазин мороженого Gllacy Shop</h1>
       <section class="about-us">
         <h2 class="visually-hidden">О магазине</h2>
-        <b class="">Магазин Глэйси - это онлайн- и офлайн-магазин по продаже мороженного собственного производства на развес</b>
+        <p class="about-preview">Магазин Глэйси - это онлайн- и офлайн-магазин по продаже мороженного собственного производства на развес</p>
         <ul class="about-list">
           <li class="about-item">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</li>
           <li class="about-item">Для приготовления мороженого используют настоящие сливки и молоко высочайшего качества. Все дополнительные ингридиенты и добавки произведены из натурального, экологчески чистого сырья.</li>
@@ -117,25 +121,29 @@
         <h2 class="blog-title">Новое в нашем блоге</h2>
         <a href="#" class="blog-info">10 способов сервировки фруктовых щербетов к столу</a>
       </article>
+
       <div class="mailing">
-        <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-        <label class="visually-hidden" for="email-field">Поле для ввода эектронной почты</label>
-        <input type="email" name="email-field" id="email-field" placeholder="Электронная почта">
-        <button class="button" type="submit">Отправить</button>
+        <div class="mailing-wrapper">
+          <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+          <label class="visually-hidden" for="email-field">Поле для ввода электронной почты</label>
+          <input type="email" name="email-field" id="email-field" placeholder="Электронная почта">
+          <button class="button" type="submit">Отправить</button>
+        </div>
       </div>
+
       <section class="map">
         <h2 class="visually-hidden">Как заказать</h2>
         <img src="img/map.jpg" width="1200" height="430" alt="Адрес офиса на карте">
-        <div class="contact-info">
+        <div class="map-contact-info">
           <p class="offline-contacts">Адрес главного офиса и офлайн-магазина:
             <br>
             <span>ул. Большая Конюшенная 19/8, Санкт-Петербург</span>
           </p>
           <p class="online-contacts">Для заказов по телефону:
             <br>
-            <span>8 812 450-25-25</span>
+            <span class="online-contacts-phone">8 812 450-25-25</span>
             <br>
-            (с 10 до 20 ежедневно)
+            <span class="online-contacts-worktime">(с 10 до 20 ежедневно)</span>
           </p>
           <a href="#" class="button">Форма обратной связи</a>
         </div>
@@ -157,7 +165,7 @@
       </ul>
       <p class="footer-copyright">
         <img src="img/logo-htmlacademy.svg" width="108" height="39" alt="Логотип HTML Academy">
-        Сделано в <a class="button" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &#169; 2019
+        Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &#169; 2019
       </p>
     </footer>
 
