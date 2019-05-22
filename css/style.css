@@ -13,12 +13,15 @@ body {
 
 a {
   color: #ffffff;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 a:hover,
 a:focus,
 a:active {
   color: #ffbc9e;
+  border-bottom: 1px solid rgba(255, 188, 158, 0.3);
 }
 
 .button {
@@ -46,6 +49,7 @@ a:active {
 
   box-shadow: 0px 1px 2px 0 #ac1000;
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(to top, #e74a35, #f26843);
+  border-bottom: 0;
 }
 
 .button:active {
@@ -53,6 +57,7 @@ a:active {
 
   box-shadow: inset 0px 2px 2px 0 #942718;
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)), linear-gradient(to bottom, #e74a35, #f26843);
+  border-bottom: 0;
 }
 
 .main-navigation {
@@ -61,26 +66,33 @@ a:active {
   font-weight: 700;
 }
 
-.site-navigation,
-.drop-down-menu {
+.site-navigation {
+  padding: 0px;
+  width: 143px;
   list-style: none;
 }
 
-.site-navigation-item a:hover,
-.site-navigation-item a:focus {
+.site-navigation-item>a:hover,
+.site-navigation-item>a:focus {
+  padding: 10px 20px;
+  border-radius: 20px;
   color: #333333;
   background-color: #f7f6f3;
+  border-bottom: 0;
 }
 
-.site-navigation-item a:active {
+.site-navigation-item>a:active {
   color: #323232;
   background-color: #ededed;
   box-shadow: inset 0px 2px 1px 0 #696969;
+  border-bottom: 0;
 }
 
-.drop-down-menu ul {
+.drop-down-menu {
   padding: 0px;
   width: 143px;
+
+  list-style: none;
 }
 
 .drop-down-menu a {
@@ -96,10 +108,12 @@ a:active {
   color: #323232;
 
   background-color: #ffffff;
+  border-bottom: 0;
 }
 
 .drop-down-menu a:hover,
 .drop-down-menu a:focus {
+
   background-color: #fbded7;
   color: #323232;
 }
@@ -126,6 +140,60 @@ a:active {
   font-weight: 700;
   text-align: right;
   color: #ffffff;
+}
+
+.breadcrumbs {
+  list-style: none;
+}
+
+.breadcrumbs a {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.breadcrumbs-current {
+  font-size: 14px;
+  line-height: 16px;
+  color: #ffffff;
+}
+
+.page-title {
+  font-size: 35px;
+  line-height: 41px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.catalog-list {
+  list-style: none;
+
+  width: 260px;
+}
+
+.catalog-item span {
+  line-height: 45px;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 0.5px 0.9px 3px rgba(49, 50, 53, 0.5);
+}
+
+.price {
+  font-size: 45px;
+}
+
+.weight {
+  font-size: 30px;
+}
+
+.catalog-item h2 {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+  color: #ffffff;
+
+  text-align: center;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 /* место для стилизации слайдера и списка */
@@ -174,12 +242,14 @@ a:active {
   line-height: 30px;
   font-weight: 700;
   color: #323232;
+  border-bottom: 2px solid rgba(50, 50, 50, 0.3);
 }
 
 .blog-info:hover,
 .blog-info:focus,
 .blog-info:active {
   color: #e84d37;
+  border-bottom: 2px solid rgba(232, 77, 55, 0.3);
 }
 
 .mailing {
@@ -269,6 +339,44 @@ a:active {
   line-height: 22px;
 }
 
+.pagination-list {
+  list-style: none;
+}
+
+.pagination-item a {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+  color: #ffffff;
+  border-bottom: none;
+}
+
+.pagination-item a:hover,
+.pagination-item a:focus {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.pagination-item a:active {
+  color: #000000;
+
+  background-color: #ffffff;
+}
+
+.pagination-item-current a,
+.pagination-item-current a:hover,
+.pagination-item-current a:focus {
+  color: #323232;
+
+  background-color: #ffffff;
+}
+
+
+.pagination-item-current a:active {
+  color: #ffffff;
+
+  background-color: none;
+}
+
 .footer-social {
   list-style: none;
 }
@@ -288,5 +396,9 @@ a:active {
 /* разметка попапов */
 
 .modal {
+  display: none;
+}
+
+.purchases-section {
   display: none;
 }
