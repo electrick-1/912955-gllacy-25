@@ -41,6 +41,8 @@ a:active {
   border: none;
   border-radius: 25px;
   box-shadow: 0 2px 2px 0 rgba(172, 16, 0, 0.64);
+
+  cursor: pointer;
 }
 
 .button:hover,
@@ -250,7 +252,7 @@ a:active {
   border-bottom: 2px solid rgba(232, 77, 55, 0.3);
 }
 
-.mailing {
+.mailing-wrapper {
   width: 560px;
   height: 220px;
 
@@ -260,7 +262,7 @@ a:active {
 
 }
 
-.mailing-wrapper {
+.mailing {
   margin: 0 auto;
   width: 549px;
   height: 211px;
