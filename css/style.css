@@ -11,6 +11,29 @@ body {
   background-color: #849d8f;
 }
 
+.main-header {
+  width: 1200px;
+  margin: 10px auto 0;
+  padding: 0 27px;
+
+  outline: 2px solid rgba(255, 255, 0, 0.5);
+}
+
+.main-header-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+
+
+.user-navigation {
+  margin-left: auto;
+}
+
+.user-navigation a {
+  margin-left: 10px;
+}
+
 a {
   color: #ffffff;
   text-decoration: none;
@@ -22,6 +45,10 @@ a:focus,
 a:active {
   color: #ffbc9e;
   border-bottom: 1px solid rgba(255, 188, 158, 0.3);
+}
+
+.main-header-logo {
+  border-bottom: none;
 }
 
 .button {
@@ -69,9 +96,13 @@ a:active {
 }
 
 .site-navigation {
+  display: flex;
   padding: 0px;
-  width: 143px;
   list-style: none;
+}
+
+.site-navigation-item {
+  margin-left: 25px;
 }
 
 .site-navigation-item>a:hover,
@@ -91,6 +122,7 @@ a:active {
 }
 
 .drop-down-menu {
+  display: none;
   padding: 0px;
   width: 143px;
 
@@ -128,7 +160,16 @@ a:active {
   font-weight: 700;
 }
 
+.contaсt-info {
+  display: flex;
+  flex-direction: column;
+  width: 170px;
+  margin-left: auto;
+}
+
 .info-time {
+  margin: 0;
+  margin-bottom: 6px;
   font-size: 14px;
   line-height: 16px;
   font-weight: 700;
@@ -137,6 +178,7 @@ a:active {
 }
 
 .info-number {
+  margin: 0;
   font-size: 22px;
   line-height: 24px;
   font-weight: 700;
@@ -253,17 +295,18 @@ a:active {
 }
 
 .mailing-wrapper {
+  display: flex;
+  margin: 20px;
   width: 560px;
   height: 220px;
 
   background-color: #f8f7f4;
   background-image: url("../img/bg-post.svg");
   border-radius: 15px;
-
 }
 
 .mailing {
-  margin: 0 auto;
+  margin: auto;
   width: 549px;
   height: 211px;
 
