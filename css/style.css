@@ -591,11 +591,16 @@ a:active {
 }
 
 .mailing input:hover {
+  padding-left: 14px;
   border: 2px solid rgba(154, 154, 154, 0.52);
+  box-sizing: border-box;
 }
 
 .mailing input:focus {
+  padding-left: 14px;
   border: 2px solid rgba(46, 136, 228, 0.52);
+  box-sizing: border-box;
+  outline: none;
 }
 
 .mailing input::placeholder {
@@ -608,13 +613,39 @@ a:active {
   margin: auto 0 0 auto;
 }
 
-.map-contact-info {
-  background-color: #ffffff;
+.map {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 1200px;
+  min-height: 430px;
+  margin-left: -27px;
+  background-image: url("../img/map.jpg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
 }
 
-.map-contact-info .button,
-.mailing .button {
-  color: #fefefe;
+.map-contact-info {
+  display: flex;
+  flex-direction: column;
+
+  width: 302px;
+  margin: auto 27px;
+  padding: 30px 25px;
+  box-sizing: border-box;
+
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+.map-contact-info p {
+  margin: 0;
+
+
+}
+
+p.offline-contacts {
+  margin-bottom: 17px;
 }
 
 .offline-contacts {
@@ -642,6 +673,15 @@ a:active {
 .online-contacts-worktime {
   font-size: 14px;
   line-height: 22px;
+}
+
+.map-contact-info .button {
+  margin-top: 25px;
+}
+
+.map-contact-info .button,
+.mailing .button {
+  color: #fefefe;
 }
 
 .pagination-list {
@@ -682,20 +722,61 @@ a:active {
   background-color: none;
 }
 
+.main-footer {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+
+  outline: 2px solid rgba(0, 0, 255, 0.5);
+}
+
 .footer-social {
+  display: flex;
+
+  width: 200px;
+
   list-style: none;
 }
 
+.footer-social li {
+  margin-right: 11px;
+  margin-top: 36px;
+}
+
 .footer-info {
+  display: flex;
+  flex-wrap: wrap;
+
+  width: 350px;
+  margin-top: 35px;
+  margin-left: 225px;
+  padding: 0;
+
+
   list-style: none;
   font-size: 13px;
   line-height: 18px;
 }
 
+.footer-info li {
+  width:165px;
+}
+
 .footer-copyright {
+  width: 190px;
+  margin: 18px 27px auto auto;
+  margin-top: 18px;
+
   font-size: 12px;
   line-height: 18px;
   color: #fefefe;
+}
+
+.footer-logo,
+.footer-logo:hover,
+.footer-logo:focus,
+.footer-logo:active {
+  border-color: transparent;
 }
 
 /* разметка попапов */
