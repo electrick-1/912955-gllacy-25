@@ -11,29 +11,6 @@ body {
   background-color: #849d8f;
 }
 
-.main-header {
-  width: 1200px;
-  margin: 10px auto 0;
-  padding: 0 27px;
-  box-sizing: border-box;
-
-
-  outline: 2px solid rgba(255, 255, 0, 0.5);
-}
-
-.main-header-wrapper {
-  display: flex;
-  align-items: center;
-}
-
-.user-navigation {
-  margin-left: auto;
-}
-
-.user-navigation a {
-  margin-left: 10px;
-}
-
 a {
   color: #ffffff;
   text-decoration: none;
@@ -109,6 +86,115 @@ a:active {
   overflow: hidden;
 }
 
+.main-header {
+  width: 1200px;
+  margin: 7px auto 0;
+  padding: 0 27px;
+  box-sizing: border-box;
+
+
+  outline: 2px solid rgba(255, 255, 0, 0.5);
+}
+
+.main-header-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.main-header-wrapper img {
+  margin-top: 3px;
+}
+
+.user-navigation {
+  display: flex;
+  margin-left: auto;
+}
+
+.user-navigation a {
+  margin-left: 10px;
+
+  border-radius: 17px;
+  border-color: transparent;
+}
+
+.search-link {
+  position: relative;
+  width: 33px;
+  height: 33px;
+
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.search-link svg {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+}
+
+.login-link svg,
+.buy-link svg {
+  position: absolute;
+  top: 8px;
+  left: 15px;
+}
+
+path {
+  fill: #ffffff;
+}
+
+.login-link,
+.buy-link {
+  position: relative;
+  padding: 6px 17px 6px 40px;
+
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.buy-link-current {
+  position: relative;
+  padding: 6px 17px 6px 40px;
+
+  background-color: #f8f7f4;
+  color: #323232;
+}
+
+.buy-link-current:hover,
+.buy-link-current:focus {
+  color: #323232;
+}
+
+.buy-link-current::before {
+  content: "";
+  background-image: url("../img/basket-red.svg");
+  width: 21px;
+  height: 20px;
+  position: absolute;
+  top: 8px;
+  left: 15px;
+}
+
+.search-link:hover,
+.search-link:focus,
+.login-link:hover,
+.login-link:focus,
+.buy-link:hover,
+.buy-link:focus {
+  background-color: #f8f7f4;
+  color: #323232;
+  border-color: transparent;
+}
+
+.search-link:hover path,
+.search-link:focus path,
+.login-link:hover path,
+.login-link:focus path,
+.buy-link:hover path,
+.buy-link:focus path,
+.buy-link:hover circle,
+.buy-link:focus circle {
+  fill: #323232;
+}
+
 .main-navigation {
   font-size: 16px;
   line-height: 18px;
@@ -117,10 +203,12 @@ a:active {
 
 .site-navigation {
   display: flex;
-  width: 400px;
-  padding: 0px;
+  width: 370px;
+  padding: 0;
+  margin: 0;
+  margin-left: 13px;
   list-style: none;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .site-navigation-item>a {
@@ -263,10 +351,12 @@ a:active {
 }
 
 .raspberry {
+  background-color: #930039;
   background-image: url("../img/raspberry.jpg");
 }
 
 .choсolate {
+  background-color: #411900;
   background-image: url("../img/choсolate.jpg");
 }
 
@@ -617,11 +707,13 @@ a:active {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+
   width: 1200px;
   min-height: 430px;
   margin-left: -27px;
-  background-image: url("../img/map.jpg");
-  background-position: 0 0;
+
+  background-image: url("../img/pin.svg"), url("../img/map.jpg");
+  background-position: 266px 139px, 0 0;
   background-repeat: no-repeat;
 }
 
@@ -734,13 +826,45 @@ p.offline-contacts {
   display: flex;
 
   width: 200px;
+  padding: 0;
+  margin: 0 27px;
 
   list-style: none;
 }
 
-.footer-social li {
-  margin-right: 11px;
-  margin-top: 36px;
+.social {
+  margin: 36px 11px 29px 0px;
+}
+
+.social a {
+  border-color: transparent;
+}
+
+.social svg {
+  width: 32px;
+  height: 32px;
+
+  border: 3px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+}
+
+.social path {
+  fill: rgba(255, 255, 255, 0.7);
+}
+
+.social:hover svg,
+.social:focus svg,
+.social:active svg {
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+.social:hover path,
+.social:focus path {
+  fill: #ffffff;
+}
+
+.social:active path {
+  fill: #e9e9e9;
 }
 
 .footer-info {
@@ -748,8 +872,7 @@ p.offline-contacts {
   flex-wrap: wrap;
 
   width: 350px;
-  margin-top: 35px;
-  margin-left: 225px;
+  margin: 35px 0px 29px 225px;
   padding: 0;
 
 
@@ -759,7 +882,26 @@ p.offline-contacts {
 }
 
 .footer-info li {
-  width:165px;
+  width: 145px;
+}
+
+.footer-info li:last-child {
+  width: 165px;
+}
+
+.footer-info li:first-child {
+  position: relative;
+}
+
+.footer-info li:first-child::before {
+  content: "";
+  position: absolute;
+  left: -22px;
+
+  width: 15px;
+  height: 13px;
+
+  background-image: url("../img/heart.svg");
 }
 
 .footer-copyright {
