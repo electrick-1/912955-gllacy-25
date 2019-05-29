@@ -91,9 +91,6 @@ a:active {
   margin: 7px auto 0;
   padding: 0 27px;
   box-sizing: border-box;
-
-
-  outline: 2px solid rgba(255, 255, 0, 0.5);
 }
 
 .main-header-wrapper {
@@ -272,6 +269,10 @@ path {
   font-weight: 700;
 }
 
+.main-header-info-wrapper {
+  display: flex;
+}
+
 .contaсt-info {
   display: flex;
   flex-direction: column;
@@ -298,13 +299,46 @@ path {
   color: #ffffff;
 }
 
+
+.breadcrumbs {
+  display: flex;
+  justify-content: space-between;
+  width: 220px;
+  margin: 0;
+  margin-top: auto;
+  padding: 0;
+  list-style: none;
+}
+
+.breadcrumbs a {
+  font-size: 14px;
+  line-height: 16px;
+  margin-right: 6px;
+}
+
+.breadcrumbs-item {
+  position: relative;
+  margin-bottom: 4px;
+
+  color: #ffffff;
+}
+
+.breadcrumbs-current {
+  position: relative;
+  top: 4px;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 16px;
+  color: #ffffff;
+}
+
+
 .container {
   width: 1200px;
   box-sizing: border-box;
   margin: 0 auto;
   padding: 0 27px;
-
-  outline: 2px solid rgba(255, 0, 0, 0.5);
 }
 
 .actions {
@@ -360,22 +394,10 @@ path {
   background-image: url("../img/choсolate.jpg");
 }
 
-.breadcrumbs {
-  list-style: none;
-}
-
-.breadcrumbs a {
-  font-size: 14px;
-  line-height: 16px;
-}
-
-.breadcrumbs-current {
-  font-size: 14px;
-  line-height: 16px;
-  color: #ffffff;
-}
-
 .page-title {
+  margin: 0;
+  padding: 0;
+
   font-size: 35px;
   line-height: 41px;
   font-weight: 700;
@@ -464,10 +486,29 @@ path {
   background-color: rgba(248,247,244, 0.4)
 }
 
+.filter-form {
+  width: 900px;
+
+  outline: 2px solid rgba(255, 0, 0, 0.5);
+}
+
+.filter-list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.filter-form ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  outline: 2px solid rgba(0, 255, 0, 0.5);
+}
+
 .hits {
   padding: 0;
   margin: 0;
-  margin-bottom: 40px;
 }
 
 .catalog-list {
@@ -485,6 +526,7 @@ path {
   position: relative;
   width: 267px;
   margin: 0;
+  margin-bottom: 40px;
   padding: 0;
 }
 
@@ -537,6 +579,7 @@ path {
   display: flex;
   flex-direction: column;
   padding: 0;
+  margin: 0;
   margin-bottom: 40px;
 
 
@@ -548,7 +591,7 @@ path {
 }
 
 .about-preview {
-  margin: 25px 20px 0;
+  margin: 25px 20px 23px;
 
   font-size: 24px;
   line-height: 30px;
@@ -566,10 +609,37 @@ path {
 }
 
 .about-item {
-  margin: 23px 0;
+  position: relative;
+  margin: 0;
+  margin-bottom: 22px;
   width: 480px;
   font-size: 16px;
   line-height: 22px;
+}
+
+.about-item::before {
+  content: "";
+  position: absolute;
+  top: -16px;
+  left: -57px;
+  width: 49px;
+  height: 49px;
+}
+
+.about-item:first-child::before {
+  background-image: url("../img/ice-cream.svg");
+}
+
+.about-item:nth-child(2)::before {
+  background-image: url("../img/cow.svg");
+}
+
+.about-item:nth-child(3)::before {
+  background-image: url("../img/eco.svg");
+}
+
+.about-item:last-child::before {
+  background-image: url("../img/thermometer.svg");
 }
 
 .news {
@@ -777,10 +847,17 @@ p.offline-contacts {
 }
 
 .pagination-list {
+  display: flex;
+  justify-content: space-between;
+  width: 205px;
   list-style: none;
+  margin: 87px 0 36px auto;
+  padding: 0;
 }
 
 .pagination-item a {
+  margin: 7px 11px;
+
   font-size: 16px;
   line-height: 18px;
   font-weight: 500;
@@ -790,23 +867,30 @@ p.offline-contacts {
 
 .pagination-item a:hover,
 .pagination-item a:focus {
+  margin: 0;
+  padding: 7px 11px;
+  border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.2);
 }
 
 .pagination-item a:active {
-  color: #000000;
-
+  padding: 7px 11px;
+  border-radius: 50%;
   background-color: #ffffff;
+
+  color: #000000;
 }
 
 .pagination-item-current a,
 .pagination-item-current a:hover,
 .pagination-item-current a:focus {
-  color: #323232;
-
+  margin: 0;
+  padding: 7px 11px;
+  border-radius: 50%;
   background-color: #ffffff;
-}
 
+  color: #323232;
+}
 
 .pagination-item-current a:active {
   color: #ffffff;
@@ -814,12 +898,30 @@ p.offline-contacts {
   background-color: none;
 }
 
+.paginator-next a {
+  border-color: transparent;
+}
+
+.paginator-next svg {
+  margin-left: 19px;
+}
+
+.paginator-back svg {
+  transform: rotate(180deg);
+  margin-right: 14px;
+}
+
+.paginator-back path {
+  fill: rgba(255, 255, 255, 0.2);
+}
+
 .main-footer {
   display: flex;
   width: 1200px;
   margin: 0 auto;
-
-  outline: 2px solid rgba(0, 0, 255, 0.5);
+  padding: 0 27px;
+  box-sizing: border-box;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .footer-social {
@@ -827,7 +929,7 @@ p.offline-contacts {
 
   width: 200px;
   padding: 0;
-  margin: 0 27px;
+  margin: 0;
 
   list-style: none;
 }
@@ -837,7 +939,7 @@ p.offline-contacts {
 }
 
 .social a {
-  border-color: transparent;
+  border: none;
 }
 
 .social svg {
@@ -906,7 +1008,7 @@ p.offline-contacts {
 
 .footer-copyright {
   width: 190px;
-  margin: 18px 27px auto auto;
+  margin: 18px 0 auto auto;
   margin-top: 18px;
 
   font-size: 12px;
