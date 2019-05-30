@@ -12,8 +12,10 @@ body {
 }
 
 .inner-page {
-  background-image: linear-gradient(rgba(132, 157, 143, 0.2), rgba(132, 157, 143, 1));
+  background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
   background-position: 0 0;
+  height: 656px;
+  background-repeat: no-repeat;
 }
 
 a {
