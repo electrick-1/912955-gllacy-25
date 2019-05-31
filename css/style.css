@@ -14,7 +14,7 @@ body {
 .inner-page {
   background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
   background-position: 0 0;
-  height: 656px;
+  background-size: auto 656px;
   background-repeat: no-repeat;
 }
 
@@ -25,7 +25,7 @@ a {
 }
 
 a:hover,
-a:focus,
+a:not(.footer-logo):not(.main-header-logo):focus,
 a:active {
   color: #ffbc9e;
   border-bottom: 1px solid rgba(255, 188, 158, 0.3);
@@ -863,40 +863,42 @@ p.offline-contacts {
 }
 
 .pagination-item a {
-  margin: 4px 8px;
+  margin: 4px 9px 3px 8px;
 
   font-size: 16px;
   line-height: 18px;
   font-weight: 500;
   color: #ffffff;
-  border-bottom: none;
+  border-color: transparent;
 }
 
 .pagination-item a:hover,
 .pagination-item a:focus {
   margin: 0;
-  padding: 4px 8px;
+  padding: 4px 9px 3px 8px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.2);
 }
 
 .pagination-item a:active {
-  padding: 4px 8px;
+  padding: 4px 9px 3px 8px;
   border-radius: 50%;
   background-color: #ffffff;
 
   color: #000000;
+  border-color: transparent;
 }
 
 .pagination-item-current a,
 .pagination-item-current a:hover,
 .pagination-item-current a:focus {
   margin: 0;
-  padding: 4px 8px;
+  padding: 4px 9px 3px 8px;
   border-radius: 50%;
   background-color: #ffffff;
 
   color: #323232;
+  border-color: transparent;
 }
 
 .pagination-item-current a:active {
@@ -909,8 +911,8 @@ p.offline-contacts {
   border-color: transparent;
 }
 
-.paginator-next svg {
-  margin-left: 14px;
+.paginator-next:active path {
+  fill: #000000;
 }
 
 .paginator-back svg {
@@ -923,13 +925,12 @@ p.offline-contacts {
 }
 
 .main-footer {
+  position: relative;
   display: flex;
   width: 1200px;
   margin: 0 auto;
-  margin-top: -2px;
   padding: 0 27px;
   box-sizing: border-box;
-  border-top: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .footer-social {
@@ -942,11 +943,14 @@ p.offline-contacts {
   list-style: none;
 }
 
-.social {
+.footer-social li {
   margin: 36px 11px 29px 0px;
 }
 
-.social a {
+.social,
+.social:hover,
+.social:focus,
+.social:active {
   border: none;
 }
 
@@ -1029,6 +1033,15 @@ p.offline-contacts {
 .footer-logo:focus,
 .footer-logo:active {
   border-color: transparent;
+}
+
+.main-footer::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  height: 1px;
+  width: 1146px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 /* разметка попапов */
