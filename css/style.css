@@ -95,8 +95,8 @@ a:active {
 
 .main-header {
   width: 1200px;
-  margin: 7px auto 0;
-  padding: 0 27px;
+  margin: 0 auto;
+  padding: 7px 27px 0;
   box-sizing: border-box;
 }
 
@@ -403,6 +403,7 @@ path {
 
 .page-title {
   margin: 0;
+  margin-bottom: 26px;
   padding: 0;
 
   font-size: 35px;
@@ -431,9 +432,22 @@ path {
 
 .slider-list img {
   position: absolute;
+  z-index: -1;
+}
+
+.slider-list:first-child img {
   top: -113px;
   left: 57px;
-  z-index: -1;
+}
+
+.slider-list:nth-child(2) img {
+  top: -113px;
+  left: 57px;
+}
+
+.slider-list:last-child img {
+  top: -113px;
+  left: 57px;
 }
 
 .slider-list h2 {
@@ -494,23 +508,117 @@ path {
 }
 
 .filter-form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
   width: 900px;
 
   outline: 2px solid rgba(255, 0, 0, 0.5);
 }
 
-.filter-list {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
+.filter-item {
+  outline: 2px solid rgba(0, 0, 255, 0.5);
 }
 
-.filter-form ul {
+.filter-item ul {
   margin: 0;
-  padding: 0;
+  margin-top: 5px;
   list-style: none;
 
   outline: 2px solid rgba(0, 255, 0, 0.5);
+}
+
+.filter-item li {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+
+  color: #ffffff;
+}
+
+.filter-item span {
+  margin: 0;
+  margin-left: 16px;
+  padding: 0;
+
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+
+  color: #ffffff;
+}
+
+.filter-item {
+  margin-right: 14px;
+}
+
+.filter-sort {
+  width: 194px;
+  padding: 8px 30px 8px 15px;
+  margin: 0;
+  margin-top: 5px;
+  box-sizing: border-box;
+
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+  color: #ffffff;
+
+  border: none;
+  border-radius: 20px;
+  background-color: rgba(248, 247, 244, 0.2);
+}
+
+.filter-sort option {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #323232;
+}
+
+
+
+.filter-fats-list {
+  display: flex;
+  justify-content: space-between;
+  width: 415px;
+  padding: 10px 17px 10px 46px;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.2);
+  box-sizing: border-box;
+}
+
+.filter-fat-label {
+  position: relative;
+}
+
+.filter-fat-label::before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/radio-off.svg");
+  width: 25px;
+  height: 25px;
+  top: -3px;
+  left: -35px;
+  opacity: 0.8;
+}
+
+.filter-fat-item input:checked+label::before {
+  background-image: url("../img/radio-on.svg");
+  opacity: 0.8;
+}
+
+.filter-fat-label:hover::before,
+.filter-fat-label:focus::before,
+.filter-fat-item input:checked+label:hover::before,
+.filter-fat-item input:checked+label:focus::before {
+  opacity: 1;
+}
+
+.filter-fat-item input[disabled]+label::before,
+.filter-fat-item input[disabled]:checked+label::before {
+  opacity: 0.4;
 }
 
 .hits {

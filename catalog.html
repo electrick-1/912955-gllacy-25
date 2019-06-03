@@ -82,67 +82,65 @@
       <section class="filter-section">
         <h2 class="visually-hidden">Поиск мороженного по параметрам</h2>
         <form class="filter-form" action="https://echo.htmlacademy.ru" method="post">
-          <ul class="filter-list">
-            <li class="filter-item">
-              <span>Сортировка:</span>
-              <ul class="drop-down-filter-menu">
-                <li class="filter-item-current">по популярности</li>
-                <li>сначала недорогие</li>
-                <li>сначала дорогие</li>
-                <li>по жирности</li>
-              </ul>
-            </li>
-            <li class="filter-item">
-              <span>Цена: 100 руб. - 500 руб.</span>
-              <!-- Здесь будет выбор диапазона стоимости -->
-            </li>
-            <li class="filter-item">
-              <span>Жирность:</span>
-              <ul class="filter-nested-list">
-                <li class="filter-nested-item">
-                  <input class="visually-hidden filter-input filter-input-radio" type="radio" name="fat-content" value="0%" id="filter-radio-1">
-                  <label for="filter-radio-1">0%</label>
-                </li>
-                <li class="filter-nested-item">
-                  <input class="visually-hidden filter-input filter-input-radio" type="radio" name="fat-content" value="<10%" id="filter-radio-2" checked>
-                  <label for="filter-radio-2">до 10%</label>
-                </li>
-                <li class="filter-nested-item">
-                  <input class="visually-hidden filter-input filter-input-radio" type="radio" name="fat-content" value="<30%" id="filter-radio-3">
-                  <label for="filter-radio-3">до 30%</label>
-                </li>
-                <li class="filter-nested-item">
-                  <input class="visually-hidden filter-input filter-input-radio" type="radio" name="fat-content" value=">30%" id="filter-radio-4">
-                  <label for="filter-radio-4">выше 30%</label>
-                </li>
-              </ul>
-            </li>
-            <li class="filter-item">
-              <span>Наполнители:</span>
-              <ul class="filter-nested-list">
-                <li class="filter-nested-item">
-                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="filler-chocolate" value="chocolate" id="filter-chocolate">
-                  <label for="filter-chocolate">шоколадные</label>
-                </li>
-                <li class="filter-nested-item">
-                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="filler-sugar" value="sugar" id="filter-sugar">
-                  <label for="filter-sugar">сахарные присылки</label>
-                </li>
-                <li class="filter-nested-item">
-                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="filler-fruit" value="fruit" id="filter-fruit">
-                  <label for="filter-fruit">фрукты</label>
-                </li>
-                <li class="filter-nested-item">
-                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="filler-sirup" value="sirup" id="filter-sirup">
-                  <label for="filter-sirup">сиропы</label>
-                </li>
-                <li class="filter-nested-item">
-                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="filler-jam" value="jam" id="filter-jam">
-                  <label for="filter-jam">джемы</label>
-                </li>
-              </ul>
-            </li>
-          </ul>
+          <div class="filter-item">
+            <span>Сортировка:</span><br>
+            <select class="filter-sort">
+              <option>по популярности</option>
+              <option>сначала недорогие</option>
+              <option>сначала дорогие</option>
+              <option>по жирности</option>
+            </select>
+          </div>
+          <div class="filter-item">
+            <span>Цена: 100 руб. - 500 руб.</span>
+            <!-- Здесь будет выбор диапазона стоимости -->
+          </div>
+          <div class="filter-item">
+            <span>Жирность:</span>
+            <ul class="filter-fats-list">
+              <li class="filter-fat-item">
+                <input class="visually-hidden filter-input filter-input-radio" type="radio" name="fat-content" value="0%" id="filter-radio-1">
+                <label for="filter-radio-1" class="filter-fat-label">0%</label>
+              </li>
+              <li class="filter-fat-item">
+                <input class="visually-hidden filter-input filter-input-radio" type="radio" name="fat-content" value="<10%" id="filter-radio-2" checked>
+                <label for="filter-radio-2" class="filter-fat-label">до 10%</label>
+              </li>
+              <li class="filter-fat-item">
+                <input class="visually-hidden filter-input filter-input-radio" type="radio" name="fat-content" value="<30%" id="filter-radio-3">
+                <label for="filter-radio-3" class="filter-fat-label">до 30%</label>
+              </li>
+              <li class="filter-fat-item">
+                <input class="visually-hidden filter-input filter-input-radio" type="radio" name="fat-content" value=">30%" id="filter-radio-4">
+                <label for="filter-radio-4" class="filter-fat-label">выше 30%</label>
+              </li>
+            </ul>
+          </div>
+          <div class="filter-item">
+            <span>Наполнители:</span>
+            <ul class="filter-fillers-list">
+              <li class="filter-filler-item">
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="filler-chocolate" value="chocolate" id="filter-chocolate">
+                <label for="filter-chocolate">шоколадные</label>
+              </li>
+              <li class="filter-filler-item">
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="filler-sugar" value="sugar" id="filter-sugar">
+                <label for="filter-sugar">сахарные присылки</label>
+              </li>
+              <li class="filter-filler-item">
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="filler-fruit" value="fruit" id="filter-fruit">
+                <label for="filter-fruit">фрукты</label>
+              </li>
+              <li class="filter-filler-item">
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="filler-sirup" value="sirup" id="filter-sirup">
+                <label for="filter-sirup">сиропы</label>
+              </li>
+              <li class="filter-filler-item">
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="filler-jam" value="jam" id="filter-jam">
+                <label for="filter-jam">джемы</label>
+              </li>
+            </ul>
+          </div>
           <button class="filter-button" type="submit">Применить</button>
         </form>
       </section>
