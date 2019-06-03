@@ -576,6 +576,8 @@ path {
   background-image: url("../img/icon-down-dir.svg");
 }
 
+/* в обычном состоянии стрелкав select должна быть больше по макету, а при выбранном состоянии черная стрелка должна быть меньше по макету. Так же непонятно как сделать постоянно активное состояние пока выбираешь нудный пункт */
+
 .filter-sort option {
   font-size: 14px;
   line-height: 16px;
@@ -638,6 +640,7 @@ path {
   background-repeat: no-repeat;
   width: 25px;
   height: 25px;
+  /* размер чекбоксов в макете меньше, но при уменьшении ширины и высоты начинает обрезаться изображение */
   top: -3px;
   left: -35px;
   opacity: 0.8;
@@ -658,6 +661,8 @@ path {
 .filter-filler-item input:checked+label:focus::before {
   opacity: 1;
 }
+
+/* при фокусе лейблы инпутов не принимают opacity: 1; */
 
 .filter-fat-item input[disabled]+label::before,
 .filter-fat-item input[disabled]:checked+label::before,
@@ -691,6 +696,8 @@ path {
 
   background-color: #ffffff;
   border:none
+
+  outline: none;
 }
 
 .filter-button:active {
@@ -757,7 +764,6 @@ path {
 
 .catalog-item h2 {
   margin: 0;
-  margin-top: 13px;
   padding: 0;
 
   font-size: 16px;
@@ -767,6 +773,36 @@ path {
 
   text-align: center;
 }
+
+.catalog-item-wrapper {
+  display: none;
+  position: absolute;
+  top: -6px;
+  left: -13px;
+  width: 293px;
+  min-height: 405px;
+
+  background-color: rgba(248, 247, 244, 0.2);
+  box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  z-index: 2;
+}
+
+.catalog-item-wrapper .button {
+  position: absolute;
+  bottom: 22px;
+  left: 46px;
+}
+
+.catalog-item:hover .catalog-item-wrapper{
+  display: block;
+}
+
+.catalog-item:hover article {
+  z-index: 3;
+}
+
+/* при наведении на карточку товара, обертка появляется над карточкой и невозможно кликнуть ссылку. Даже изменение z-index у самой карточки не помогает. Как это обойти? */
 
 .about-us {
   display: flex;
