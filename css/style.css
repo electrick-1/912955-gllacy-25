@@ -403,7 +403,7 @@ path {
 
 .page-title {
   margin: 0;
-  margin-bottom: 26px;
+  margin-bottom: 11px;
   padding: 0;
 
   font-size: 35px;
@@ -512,20 +512,13 @@ path {
   flex-wrap: wrap;
   flex-direction: row;
   width: 900px;
-
-  outline: 2px solid rgba(255, 0, 0, 0.5);
-}
-
-.filter-item {
-  outline: 2px solid rgba(0, 0, 255, 0.5);
+  margin-bottom: 40px;
 }
 
 .filter-item ul {
   margin: 0;
   margin-top: 5px;
   list-style: none;
-
-  outline: 2px solid rgba(0, 255, 0, 0.5);
 }
 
 .filter-item li {
@@ -549,12 +542,13 @@ path {
 }
 
 .filter-item {
+  margin-top: 10px;
   margin-right: 14px;
 }
 
 .filter-sort {
   width: 194px;
-  padding: 8px 30px 8px 15px;
+  padding: 8px 0px 8px 15px;
   margin: 0;
   margin-top: 5px;
   box-sizing: border-box;
@@ -564,10 +558,22 @@ path {
   line-height: 18px;
   font-weight: 500;
   color: #ffffff;
+  appearance: none;
+  -webkit-appearance: button;
 
   border: none;
   border-radius: 20px;
   background-color: rgba(248, 247, 244, 0.2);
+  background-image: url("../img/select-arrow.svg");
+  background-position: 168px 14px;
+  background-size: 11px 10px;
+  background-repeat: no-repeat;
+}
+
+.filter-sort:active {
+  color: #323232;
+  background-color: #ffffff;
+  background-image: url("../img/icon-down-dir.svg");
 }
 
 .filter-sort option {
@@ -576,8 +582,6 @@ path {
   font-weight: 400;
   color: #323232;
 }
-
-
 
 .filter-fats-list {
   display: flex;
@@ -591,6 +595,8 @@ path {
 
 .filter-fat-label {
   position: relative;
+
+  cursor: pointer;
 }
 
 .filter-fat-label::before {
@@ -609,16 +615,88 @@ path {
   opacity: 0.8;
 }
 
+.filter-fillers-list {
+  display: flex;
+  justify-content: space-between;
+  width: 703px;
+  padding: 10px 20px 10px 48px;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.2);
+  box-sizing: border-box;
+}
+
+.filter-filler-label {
+  position: relative;
+
+  cursor: pointer;
+}
+
+.filter-filler-label::before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/checkbox-off.svg");
+  background-repeat: no-repeat;
+  width: 25px;
+  height: 25px;
+  top: -3px;
+  left: -35px;
+  opacity: 0.8;
+}
+
+.filter-filler-item input:checked+label::before {
+  background-image: url("../img/checkbox-on.svg");
+  opacity: 0.8;
+}
+
 .filter-fat-label:hover::before,
 .filter-fat-label:focus::before,
+.filter-filler-label:hover::before,
+.filter-filler-label:focus::before,
 .filter-fat-item input:checked+label:hover::before,
-.filter-fat-item input:checked+label:focus::before {
+.filter-fat-item input:checked+label:focus::before,
+.filter-filler-item input:checked+label:hover::before,
+.filter-filler-item input:checked+label:focus::before {
   opacity: 1;
 }
 
 .filter-fat-item input[disabled]+label::before,
-.filter-fat-item input[disabled]:checked+label::before {
+.filter-fat-item input[disabled]:checked+label::before,
+.filter-filler-item input[disabled]+label::before,
+.filter-filler-item input[disabled]:checked+label::before {
   opacity: 0.4;
+}
+
+.filter-button {
+  align-self: flex-end;
+  width: 144px;
+  min-height: 37px;
+  padding: 7px 30px;
+  box-sizing: border-box;
+
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+  color: #ffffff;
+
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 2px solid #ffffff;
+  border-radius: 20px;
+
+  cursor: pointer;
+}
+
+.filter-button:hover,
+.filter-button:focus {
+  color: #323232;
+
+  background-color: #ffffff;
+  border:none
+}
+
+.filter-button:active {
+  background-color: #ededed;
+  box-shadow: inset 0px 2px 1px 0 #696969;
+  border-color: transparent;
 }
 
 .hits {
