@@ -435,24 +435,22 @@ path {
   min-height: 535px;
 }
 
-.slider-list img {
+.slider-item img {
   position: absolute;
+  top: -120px;
   z-index: -1;
 }
 
-.slider-list:first-child img {
-  top: -113px;
-  left: 57px;
+.slider-item:first-child img {
+  left: 51px;
 }
 
-.slider-list:nth-child(2) img {
-  top: -113px;
-  left: 57px;
+.slider-item:nth-child(2) img {
+  left: 41px;
 }
 
-.slider-list:last-child img {
-  top: -113px;
-  left: 57px;
+.slider-item:last-child img {
+  left: 34px;
 }
 
 .slider-list h2 {
@@ -486,6 +484,7 @@ path {
   justify-content: space-between;
   position: absolute;
   bottom: 63px;
+  z-index: 2;
 }
 
 .slider-controls label {
@@ -507,8 +506,8 @@ path {
     background-color: #ffffff;
 }
 
-.slider-controls label:hover,
-.slider-controls label:focus {
+.slider-controls input:hover+label,
+.slider-controls input:focus+label {
   background-color: rgba(248,247,244, 0.4)
 }
 
@@ -925,9 +924,9 @@ path {
   border-bottom: 2px solid rgba(50, 50, 50, 0.3);
 }
 
-.blog-info span:hover,
-.blog-info span:focus,
-.blog-info span:active {
+.blog-info:hover span,
+.blog-info:focus span,
+.blog-info:active span {
   color: #e84d37;
   border-bottom: 2px solid rgba(232, 77, 55, 0.3);
 }
