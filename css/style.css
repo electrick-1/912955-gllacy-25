@@ -655,18 +655,16 @@ path {
   opacity: 0.8;
 }
 
-.filter-fat-label:hover::before,
-.filter-fat-label:focus::before,
-.filter-filler-label:hover::before,
-.filter-filler-label:focus::before,
-.filter-fat-item input:checked+label:hover::before,
-.filter-fat-item input:checked+label:focus::before,
-.filter-filler-item input:checked+label:hover::before,
-.filter-filler-item input:checked+label:focus::before {
+.filter-fat-item input:hover+label::before,
+.filter-fat-item input:focus+label::before,
+.filter-filler-item input:hover+label::before,
+.filter-filler-item input:focus+label::before,
+.filter-fat-item input:checked:hover+label::before,
+.filter-fat-item input:checked:focus+label::before,
+.filter-filler-item input:checked:hover+label::before,
+.filter-filler-item input:checked:focus+label::before {
   opacity: 1;
 }
-
-/* при фокусе лейблы инпутов не принимают opacity: 1; */
 
 .filter-fat-item input[disabled]+label::before,
 .filter-fat-item input[disabled]:checked+label::before,
