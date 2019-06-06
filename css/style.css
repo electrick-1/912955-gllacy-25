@@ -220,6 +220,10 @@ path {
   justify-content: space-between;
 }
 
+.site-navigation-item {
+  position: relative;
+}
+
 .site-navigation-item>a {
   margin: 5px 10px;
 }
@@ -243,18 +247,28 @@ path {
 }
 
 .drop-down-menu {
-  display: none;
+  position: absolute;
+  top: 30px;
+  left: -10px;
+  margin: 0;
   padding: 0px;
   width: 143px;
 
   list-style: none;
+  border-radius: 5px;
+  box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
+  background-color: #f8f7f4;
+
+  overflow: hidden;
+  z-index: 3;
 }
 
 .drop-down-menu a {
   display: inline-block;
   width: 103px;
   min-height: 16px;
-  padding: 6px 20px;
+  padding: 8px 20px;
+  margin: 0;
 
   font-size: 14px;
   line-height: 16px;
@@ -262,8 +276,12 @@ path {
   text-decoration: none;
   color: #323232;
 
-  background-color: #ffffff;
+  background-color: #f8f7f4;
   border-bottom: 0;
+}
+
+.last-item-drom-menu a {
+  padding-bottom: 13px;
 }
 
 .drop-down-menu a:hover,
@@ -277,8 +295,24 @@ path {
   background-color: #f6b5a5
 }
 
+.new-in-catalog {
+  position: relative;
+}
+
 .new-in-catalog a {
   font-weight: 700;
+  padding: 11px 20px;
+}
+
+.new-in-catalog::after {
+  content: "";
+  height: 1px;
+  width: 128px;
+  background-color: rgba(20, 20, 20, 0.2);
+
+  position: absolute;
+  top: 38px;
+  left: 6px;
 }
 
 .main-header-info-wrapper {
@@ -642,11 +676,12 @@ path {
   position: absolute;
   background-image: url("../img/checkbox-off.svg");
   background-repeat: no-repeat;
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
+  background-size: 20px 20px;
   /* размер чекбоксов в макете меньше, но при уменьшении ширины и высоты начинает обрезаться изображение */
-  top: -3px;
-  left: -35px;
+  top: 0;
+  left: -32px;
   opacity: 0.8;
 }
 
@@ -776,7 +811,8 @@ path {
   text-align: center;
 }
 
-.catalog-item-wrapper {
+.catalog-item::after {
+  content: "";
   display: none;
   position: absolute;
   top: -6px;
@@ -787,21 +823,26 @@ path {
   background-color: rgba(248, 247, 244, 0.2);
   box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
   border-radius: 5px;
+
   z-index: 2;
 }
 
-.catalog-item-wrapper .button {
+.catalog-item .button {
+  display: none;
   position: absolute;
-  bottom: 22px;
-  left: 46px;
+  bottom: -60px;
+  left: 33px;
+
+  z-index: 3;
 }
 
-.catalog-item:hover .catalog-item-wrapper{
+.catalog-item:hover .catalog-item::after,
+.catalog-item:hover .button {
   display: block;
 }
 
 .catalog-item:hover article {
-  z-index: 3;
+  z-index: 3
 }
 
 /* при наведении на карточку товара, обертка появляется над карточкой и невозможно кликнуть ссылку. Даже изменение z-index у самой карточки не помогает. Как это обойти? */
