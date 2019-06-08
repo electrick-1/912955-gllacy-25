@@ -1455,6 +1455,8 @@ p.offline-contacts {
   border: 2px solid rgba(46, 136, 228, 0.52);
   box-sizing: border-box;
   outline: none;
+  color: #323232;
+  font-weight: 700;
 }
 
 .feedback-text:hover,
