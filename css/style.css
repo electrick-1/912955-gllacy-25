@@ -14,7 +14,7 @@ body {
 .inner-page {
   background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
   background-position: 0 0;
-  background-size: auto 656px;
+  background-size: 100% 656px;
   background-repeat: no-repeat;
 }
 
@@ -247,6 +247,7 @@ path {
 }
 
 .drop-down-menu {
+  display: block; /* Настроить выпадающее меню */
   position: absolute;
   top: 30px;
   left: -10px;
@@ -608,10 +609,12 @@ path {
   background-repeat: no-repeat;
 }
 
-.filter-sort:active {
+.filter-sort:hover,
+.filter-sort:focus {
   color: #323232;
   background-color: #ffffff;
   background-image: url("../img/icon-down-dir.svg");
+  background-size: 11px 10px;
 }
 
 /* в обычном состоянии стрелкав select должна быть больше по макету, а при выбранном состоянии черная стрелка должна быть меньше по макету. Так же непонятно как сделать постоянно активное состояние пока выбираешь нудный пункт */
@@ -1320,7 +1323,172 @@ p.offline-contacts {
 /* разметка попапов */
 
 .modal {
-  display: none;
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+  background-color: #f8f7f4;
+  box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+}
+
+.modal-search {
+  top: 59px;
+  right: 420px;
+  width: 341px;
+  padding: 20px 15px;
+}
+
+.modal input,
+.feedback-text {
+  height: 44px;
+  margin: 0;
+  padding: 10px 15px;
+  box-sizing: border-box;
+
+  font: inherit;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #999999;
+
+  background-color: #ffffff;
+  border: 1px solid rgba(178, 178, 178, 0.52);
+  border-radius: 5px;
+}
+
+.modal-search input {
+  width: 100%;
+}
+
+.modal-login p {
+  margin: 0;
+  padding: 0;
+}
+
+.modal-login {
+  width: 277px;
+  top: 59px;
+  right: 134px;
+  padding: 20px 18px;
+}
+
+.login-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.modal-login input {
+  width: 241px;
+  margin-bottom: 20px;
+}
+
+.modal-feedback input {
+  width: 267px;
+}
+
+.modal-feedback {
+  display: block;
+  margin-left: -239px;
+  margin-top: -222px;
+  top: 50%;
+  left: 50%;
+  position: fixed;
+  width: 478px;
+  min-height: 443px;
+  padding: 20px 25px;
+}
+
+.feedback-form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 17px;
+  width: 18px;
+  height: 17px;
+  background-color: transparent;
+  background-image: url("../img/cross-big.svg");
+  background-size: 18px 17px;
+  border: none;
+}
+
+.modal-feedback h2 {
+  margin: 0;
+  margin-bottom: 22px;
+}
+
+.modal-feedback p {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.feedback-text {
+  width: 428px;
+  min-height: 155px;
+  margin: 0;
+}
+
+.modal-feedback .button {
+  align-self: flex-end;
+  margin: 25px 0 10px auto;
+}
+
+.modal-login input:hover,
+.modal-search input:hover,
+.modal-feedback input:hover,
+.feedback-text:hover {
+  padding-left: 14px;
+  border: 2px solid rgba(154, 154, 154, 0.52);
+  box-sizing: border-box;
+}
+
+.modal-login input:focus,
+.modal-search input:focus,
+.modal-feedback input:focus,
+.feedback-text:focus {
+  padding-left: 14px;
+  border: 2px solid rgba(46, 136, 228, 0.52);
+  box-sizing: border-box;
+  outline: none;
+}
+
+.feedback-text:hover,
+.feedback-text:focus {
+  padding-top: 9px;
+}
+
+.modal-login input::placeholder,
+.modal-search input::placeholder,
+.modal-feedback input::placeholder,
+.feedback-text::placeholder {
+  font-weight: 400;
+  color: #9999999;
+}
+
+.modal-login a {
+  font-size: 13px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #323232;
+  border-bottom: 1px solid rgba(50, 50, 50, 0.3);
+}
+
+.modal-login a:hover,
+.modal-login a:focus,
+.modal-login a:active {
+  color: #e84d37;
+  border-bottom: 2px solid rgba(232, 77, 55, 0.3);
+}
+
+.modal-login .button {
+  width: 100px;
+  box-sizing: border-box;
+  box-shadow: 0px 1px 2px 0 #ac1000;
 }
 
 .purchases-section {
