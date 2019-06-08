@@ -1494,5 +1494,85 @@ p.offline-contacts {
 }
 
 .purchases-section {
-  display: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: absolute;
+  top: 300px;
+  right: 40px;
+
+  width: 539px;
+  margin: 0;
+  padding: 20px 15px;
+  box-sizing: border-box;
+
+  background-color: #f8f7f4;
+  border-radius: 5px;
+  box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
+}
+
+.purchases-section table {
+  margin-bottom: 15px;
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 400;
+
+  border-bottom: 1px solid #cacac7;
+}
+
+.purchases-section td {
+  margin: 0;
+  padding: 13px;
+  border: none;
+}
+
+.purchases-section td:first-child {
+  width: 25px;
+  padding: 0;
+}
+
+.purchases-section td:nth-child(2) {
+  padding: 0;
+}
+
+.purchases-section td:nth-child(3) {
+}
+
+.purchases-section td:nth-child(4) {
+  width: 95px;
+}
+
+.purchases-section td:last-child {
+  width: 50px;
+}
+
+.purchases-section span {
+  color: #999999;
+}
+
+.purchases-section img {
+  border-radius: 50%;
+}
+
+.remove-cross {
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  margin-left: 6px;
+
+  background-color: transparent;
+  background-image: url("../img/cross-big.svg");
+  background-size: 11px 11px;
+  background-repeat: no-repeat;
+}
+
+.total-cost {
+  margin: 0;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 700;
+}
+
+.purchases-section .button {
+  margin-top: 15px;
 }
