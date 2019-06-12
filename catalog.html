@@ -23,7 +23,7 @@
                   <a href="#">Новинки</a>
                 </li>
                 <li>
-                  <a href="catalog.html">Сливочное</a>
+                  <a href="catalog.html" class="drop-down-current">Сливочное</a>
                 </li>
                 <li>
                   <a href="#">Щербеты</a>
@@ -47,6 +47,11 @@
             </svg>
             <span class="visually-hidden">Поиск</span>
           </a>
+          <section class="modal modal-search">
+            <h2 class="visually-hidden">Поиск</h2>
+            <label class="visually-hidden" for="search-field">Поле поиска</label>
+            <input type="search" name="search-field" placeholder="Что ищем?" id="search-field">
+          </section>
           <a href="#" class="login-link">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="19" viewBox="0 0 21 19">
               <g fill="#000">
@@ -56,9 +61,70 @@
             </svg>
             Вход
           </a>
+          <section class="modal modal-login">
+            <h2 class="visually-hidden">Форма входа</h2>
+            <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+              <p>
+                <label class="visually-hidden" for="login-email-field">Электронная почта</label>
+                <input type="email" name="login-email-field" placeholder="Электронная почта" id="login-email-field">
+              </p>
+              <p>
+                <label class="visually-hidden" for="login-password-field">Пароль</label>
+                <input type="password" name="login-password-field" placeholder="Пароль" id="login-password-field">
+              </p>
+              <button class="button" type="submit">Войти</button>
+              <p>
+                <a href="#">Забыли пароль?</a><br>
+                <a href="#">Новая регистрация</a>
+              </p>
+            </form>
+          </section>
           <a href="#" class="buy-link-current">
             2 товара
           </a>
+          <section class="purchases-section">
+            <h2 class="visually-hidden">Список товаров в корзине</h2>
+            <table>
+              <tr class="ordered-item">
+                <td>
+                  <a class="remove-cross" href="#"></a>
+                </td>
+                <td>
+                  <img src="img/catalog-item-small-1.jpg" alt="Пломбир с апельсиновым джемом">
+                </td>
+                <td>
+                  Пломбир с апельсиновым джемом
+                </td>
+                <td>
+                  1,5 кг х <span class="grey-text">200 руб.</span>
+                </td>
+                <td>
+                  300 руб.
+                </td>
+              </tr>
+              <tr class="ordered-item">
+                <td>
+                  <a class="remove-cross" href="#"></a>
+                </td>
+                <td>
+                  <img src="img/catalog-item-small-3.jpg" alt="Клубничный пломбир с присыпкой из белого шоколада">
+                </td>
+                <td>
+                  Клубничный пломбир с присыпкой из белого шоколада
+                </td>
+                <td>
+                  1,5 кг х <span class="grey-text">300 руб.</span>
+                </td>
+                <td>
+                  450 руб.
+                </td>
+              </tr>
+            </table>
+            <p class="total-cost">
+              Итого 750 руб.
+            </p>
+            <a class="button" href="#">Оформить заказ</a>
+          </section>
         </div>
       </div>
 
@@ -340,75 +406,5 @@
         Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &#169; 2019
       </p>
     </footer>
-
-    <section class="modal modal-search">
-      <h2 class="visually-hidden">Поиск</h2>
-      <label class="visually-hidden" for="search-field">Поле поиска</label>
-      <input type="search" name="search-field" placeholder="Что ищем?" id="search-field">
-    </section>
-
-    <section class="modal modal-login">
-      <h2 class="visually-hidden">Форма входа</h2>
-      <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
-        <p>
-          <label class="visually-hidden" for="login-email-field">Электронная почта</label>
-          <input type="email" name="login-email-field" placeholder="Электронная почта" id="login-email-field">
-        </p>
-        <p>
-          <label class="visually-hidden" for="login-password-field">Пароль</label>
-          <input type="password" name="login-password-field" placeholder="Пароль" id="login-password-field">
-        </p>
-        <button class="button" type="submit">Войти</button>
-        <p>
-          <a href="#">Забыли пароль?</a>
-          <a href="#">Новая регистрация</a>
-        </p>
-      </form>
-    </section>
-
-    <section class="purchases-section">
-      <h2 class="visually-hidden">Список товаров в корзине</h2>
-      <table>
-        <tr class="ordered-item">
-          <td>
-            <a class="remove-cross" href="#"></a>
-          </td>
-          <td>
-            <img src="img/catalog-item-small-1.jpg" alt="Пломбир с апельсиновым джемом">
-          </td>
-          <td>
-            Пломбир с апельсиновым джемом
-          </td>
-          <td>
-            1,5 кг х <span class="grey-text">200 руб.</span>
-          </td>
-          <td>
-            300 руб.
-          </td>
-        </tr>
-        <tr class="ordered-item">
-          <td>
-            <a class="remove-cross" href="#"></a>
-          </td>
-          <td>
-            <img src="img/catalog-item-small-3.jpg" alt="Клубничный пломбир с присыпкой из белого шоколада">
-          </td>
-          <td>
-            Клубничный пломбир с присыпкой из белого шоколада
-          </td>
-          <td>
-            1,5 кг х <span class="grey-text">300 руб.</span>
-          </td>
-          <td>
-            450 руб.
-          </td>
-        </tr>
-      </table>
-      <p class="total-cost">
-        Итого 750 руб.
-      </p>
-      <a class="button" href="#">Оформить заказ</a>
-    </section>
-
   </body>
 </html>

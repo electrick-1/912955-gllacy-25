@@ -15,7 +15,7 @@ body {
   background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
   background-position: 0 0;
   background-size: 100% 656px;
-  background-repeat: no-repeat;
+  background-repeat: repeat-x;
 }
 
 a {
@@ -116,6 +116,7 @@ a:active {
 
 .user-navigation {
   display: flex;
+  position: relative;
   margin-left: auto;
 }
 
@@ -246,8 +247,18 @@ path {
   border-color: transparent;
 }
 
+.site-navigation-item .site-navigation-current,
+.site-navigation-item .site-navigation-current:hover,
+.site-navigation-item .site-navigation-current:focus {
+  border-radius: 20px;
+  background-color: #d07058;
+  color: #ffffff;
+  padding: 5px 10px;
+  margin: 0;
+}
+
 .drop-down-menu {
-  display: block; /* Настроить выпадающее меню */
+  display: none;
   position: absolute;
   top: 30px;
   left: -10px;
@@ -294,6 +305,20 @@ path {
 
 .drop-down-menu a:active {
   background-color: #f6b5a5
+}
+
+.drop-down-menu .drop-down-current,
+.drop-down-menu .drop-down-current:hover,
+.drop-down-menu .drop-down-current:focus,
+.drop-down-menu .drop-down-current:active {
+  color: #ffffff;
+  background-color: #d07058;
+}
+
+a:hover+.drop-down-menu,
+a:focus+.drop-down-menu,
+a:active+.drop-down-menu {
+  display: block;
 }
 
 .new-in-catalog {
@@ -1332,8 +1357,10 @@ p.offline-contacts {
 }
 
 .modal-search {
-  top: 59px;
-  right: 420px;
+  display: none;
+  position: absolute;
+  top: 37px;
+  right: 211px;
   width: 341px;
   padding: 20px 15px;
 }
@@ -1366,10 +1393,13 @@ p.offline-contacts {
 }
 
 .modal-login {
+  display: none;
+  position: absolute;
   width: 277px;
-  top: 59px;
-  right: 134px;
+  top: 37px;
+  right: 107px;
   padding: 20px 18px;
+  z-index: 2;
 }
 
 .login-form {
@@ -1414,6 +1444,7 @@ p.offline-contacts {
   background-color: transparent;
   background-image: url("../img/cross-big.svg");
   background-size: 18px 17px;
+  background-repeat: no-repeat;
   border: none;
 }
 
@@ -1493,15 +1524,24 @@ p.offline-contacts {
   box-shadow: 0px 1px 2px 0 #ac1000;
 }
 
+.search-link:hover+.modal-search,
+.search-link:focus+.modal-search,
+.search-link:active+.modal-search,
+.login-link:hover+.modal-login,
+.login-link:focus+.modal-login,
+.login-link:active+.modal-login {
+  display: block;
+}
+
 .purchases-section {
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: flex-end;
   position: absolute;
-  top: 300px;
-  right: 40px;
+  top: 37px;
+  right: 0px;
 
-  width: 539px;
+  width: 540px;
   margin: 0;
   padding: 20px 15px;
   box-sizing: border-box;
@@ -1509,6 +1549,8 @@ p.offline-contacts {
   background-color: #f8f7f4;
   border-radius: 5px;
   box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
+
+  z-index: 2;
 }
 
 .purchases-section table {
@@ -1522,24 +1564,14 @@ p.offline-contacts {
 
 .purchases-section td {
   margin: 0;
-  padding: 13px;
+  padding: 0;
+  padding-right: 14px;
+  padding-bottom: 20px;
   border: none;
 }
 
-.purchases-section td:first-child {
-  width: 25px;
-  padding: 0;
-}
-
-.purchases-section td:nth-child(2) {
-  padding: 0;
-}
-
-.purchases-section td:nth-child(3) {
-}
-
-.purchases-section td:nth-child(4) {
-  width: 95px;
+.purchases-section td:nth-last-child(2) {
+  width: 110px;
 }
 
 .purchases-section td:last-child {
@@ -1558,7 +1590,6 @@ p.offline-contacts {
   display: inline-block;
   width: 11px;
   height: 11px;
-  margin-left: 6px;
 
   background-color: transparent;
   background-image: url("../img/cross-big.svg");
@@ -1575,4 +1606,10 @@ p.offline-contacts {
 
 .purchases-section .button {
   margin-top: 15px;
+}
+
+.buy-link-current:hover+.purchases-section,
+.buy-link-current:focus+.purchases-section,
+.buy-link-current:active+.purchases-section {
+  display: flex;
 }

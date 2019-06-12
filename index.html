@@ -45,6 +45,11 @@
             </svg>
             <span class="visually-hidden">Поиск</span>
           </a>
+          <section class="modal modal-search">
+            <h2 class="visually-hidden">Поиск</h2>
+            <label class="visually-hidden" for="search-field">Поле поиска</label>
+            <input type="search" name="search-field" placeholder="Что ищем?" id="search-field">
+          </section>
           <a href="#" class="login-link">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="19" viewBox="0 0 21 19">
               <g fill="#000">
@@ -54,6 +59,24 @@
             </svg>
             Вход
           </a>
+          <section class="modal modal-login">
+            <h2 class="visually-hidden">Форма входа</h2>
+            <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+              <p>
+                <label class="visually-hidden" for="login-email-field">Электронная почта</label>
+                <input type="email" name="login-email-field" placeholder="Электронная почта" id="login-email-field">
+              </p>
+              <p>
+                <label class="visually-hidden" for="login-password-field">Пароль</label>
+                <input type="password" name="login-password-field" placeholder="Пароль" id="login-password-field">
+              </p>
+              <button class="button" type="submit">Войти</button>
+              <p>
+                <a href="#">Забыли пароль?</a><br>
+                <a href="#">Новая регистрация</a>
+              </p>
+            </form>
+          </section>
           <a href="#" class="buy-link">
             <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20">
               <g fill="#FFF">
@@ -255,30 +278,9 @@
       </p>
     </footer>
 
-    <section class="modal modal-search">
-      <h2 class="visually-hidden">Поиск</h2>
-      <label class="visually-hidden" for="search-field">Поле поиска</label>
-      <input type="search" name="search-field" placeholder="Что ищем?" id="search-field">
-    </section>
 
-    <section class="modal modal-login">
-      <h2 class="visually-hidden">Форма входа</h2>
-      <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
-        <p>
-          <label class="visually-hidden" for="login-email-field">Электронная почта</label>
-          <input type="email" name="login-email-field" placeholder="Электронная почта" id="login-email-field">
-        </p>
-        <p>
-          <label class="visually-hidden" for="login-password-field">Пароль</label>
-          <input type="password" name="login-password-field" placeholder="Пароль" id="login-password-field">
-        </p>
-        <button class="button" type="submit">Войти</button>
-        <p>
-          <a href="#">Забыли пароль?</a><br>
-          <a href="#">Новая регистрация</a>
-        </p>
-      </form>
-    </section>
+
+
 
     <section class="modal modal-feedback">
       <h2>Мы обязательно вам ответим!</h2>
