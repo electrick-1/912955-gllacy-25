@@ -157,9 +157,25 @@
               <option>по жирности</option>
             </select>
           </div>
-          <div class="filter-item">
-            <span>Цена: 100 руб. - 500 руб.</span>
-            <!-- Здесь будет выбор диапазона стоимости -->
+          <div class="filter-item filter-range">
+            <span class="price-controls">Цена:
+              <label class="min-price">
+                <input type="text" name="min-price" value="100">
+                 руб.
+              </label>
+               -
+              <label class="max-price">
+                <input type="text" name="max-price" value="500">
+                 руб.
+               </label>
+             </span>
+            <div class="range-controls">
+              <div class="scale">
+                <div class="bar"></div>
+              </div>
+              <div class="range-toggle range-toggle-min"></div>
+              <div class="range-toggle range-toggle-max"></div>
+            </div>
           </div>
           <div class="filter-item">
             <span>Жирность:</span>

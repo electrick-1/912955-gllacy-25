@@ -612,9 +612,9 @@ a:active+.drop-down-menu {
 
 .filter-sort {
   width: 194px;
-  padding: 8px 0px 8px 15px;
+  padding: 10px 0px 10px 16px;
   margin: 0;
-  margin-top: 5px;
+  margin-top: 6px;
   box-sizing: border-box;
 
   font-family: "Roboto", Arial, sans-serif;
@@ -649,6 +649,79 @@ a:active+.drop-down-menu {
   line-height: 16px;
   font-weight: 400;
   color: #323232;
+}
+
+.filter-range {
+  width: 220px;
+}
+
+.price-controls label {
+  position: relative;
+  display: inline-block;
+
+  cursor: pointer;
+}
+
+.price-controls .min-price,
+.price-controls .max-price {
+  width: 25px;
+  padding-left: 30px;
+}
+
+.price-controls input {
+  position: absolute;
+  left: -135px;
+
+  min-width: 20px;
+  margin: 0;
+
+  background: none;
+  border: none;
+
+  color: inherit;
+  font: inherit;
+  text-align: right;
+
+  outline: none;
+}
+
+.range-controls {
+  position: relative;
+  padding: 17px 22px 16px;
+  margin-top: 6px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+}
+
+.range-controls .scale {
+  height: 4px;
+  background-color: rgba(248, 247, 244, 0.5);
+}
+
+.range-controls .bar {
+  width: 107px;
+  margin-left: 16px;
+  height: 4px;
+  background-color: #f8f7f4;
+}
+
+.range-toggle {
+  position: absolute;
+  top: 9px;
+
+  width: 20px;
+  height: 20px;
+  background-image: url("../img/filter-button.svg");
+
+  cursor: pointer;
+}
+
+.range-toggle-min {
+  left: 36px;
+}
+
+.range-toggle-max {
+  left: 133px;
 }
 
 .filter-fats-list {
@@ -708,7 +781,6 @@ a:active+.drop-down-menu {
   width: 20px;
   height: 20px;
   background-size: 20px 20px;
-  /* размер чекбоксов в макете меньше, но при уменьшении ширины и высоты начинает обрезаться изображение */
   top: 0;
   left: -32px;
   opacity: 0.8;
@@ -880,8 +952,6 @@ a:active+.drop-down-menu {
 .catalog-item:hover article {
   z-index: 3;
 }
-
-/* при наведении на карточку товара, обертка появляется над карточкой и невозможно кликнуть ссылку. Даже изменение z-index у самой карточки не помогает. Как это обойти? */
 
 .about-us {
   display: flex;
