@@ -11,6 +11,7 @@ body {
 
 .inner-page {
   background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
+  background-color: #849d8f;
   background-position: 0 0;
   background-size: 100% 656px;
   background-repeat: repeat-x;
