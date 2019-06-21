@@ -8,7 +8,7 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
 
-  <body>
+  <body class="slider-background-1">
     <header class="main-header">
       <div class="main-header-wrapper">
         <img src="img/logo.svg" width="154" height="64" alt="Логотип Gllacy Shop">
@@ -100,14 +100,14 @@
       <div class="slider">
         <div class="slider-controls">
           <input class="visually-hidden" type="radio" name="slider" id="slide-1" checked>
-          <label for="slide-1"><span class="visually-hidden">Первый слайд</span></label>
+          <label for="slide-1" class="slider-control"><span class="visually-hidden">Первый слайд</span></label>
           <input class="visually-hidden" type="radio" name="slider" id="slide-2">
-          <label for="slide-2"><span class="visually-hidden">Второй слайд</span></label>
+          <label for="slide-2" class="slider-control"><span class="visually-hidden">Второй слайд</span></label>
           <input class="visually-hidden" type="radio" name="slider" id="slide-3">
-          <label for="slide-3"><span class="visually-hidden">Третий слайд</span></label>
+          <label for="slide-3" class="slider-control"><span class="visually-hidden">Третий слайд</span></label>
         </div>
         <ul class="slider-list">
-          <li class="slider-item">
+          <li class="slider-item slide-show">
             <img src="img/background-image-1.png" width="1045" height="881" alt="Крем-брюле и пломбир с малиновым джемом">
             <h2>Крем-брюле и пломбир с малиновым джемом</h2>
             <a class="button" href="#">Давайте оба!</a>
@@ -222,6 +222,7 @@
       </div>
 
       <section class="map">
+        <iframe src="https://yandex.ru/map-widget/v1/-/CBF9nKAJWA" width="1200" height="430" allowfullscreen="true"></iframe>
         <h2 class="visually-hidden">Как заказать</h2>
         <div class="map-contact-info">
           <p class="offline-contacts">Адрес главного офиса и офлайн-магазина:
@@ -234,7 +235,7 @@
             <br>
             <span class="online-contacts-worktime">(с 10 до 20 ежедневно)</span>
           </p>
-          <a href="#" class="button">Форма обратной связи</a>
+          <a href="#" class="button feedback-link">Форма обратной связи</a>
         </div>
       </section>
     </main>
@@ -279,9 +280,6 @@
     </footer>
 
 
-
-
-
     <section class="modal modal-feedback">
       <h2>Мы обязательно вам ответим!</h2>
       <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
@@ -298,6 +296,9 @@
         <button class="modal-close" type="button"></button>
       </form>
     </section>
+    <div class="feedback-wrapper">
+    </div>
 
+    <script src="js/script.js"></script>
   </body>
 </html>
