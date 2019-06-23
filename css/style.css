@@ -1169,12 +1169,11 @@ a:active+.drop-down-menu {
   justify-content: flex-end;
   align-items: center;
 
-  width: 1200px;
+  width: 100%;
   min-height: 430px;
-  margin-left: -27px;
 
   background-image: url("../img/pin.svg"), url("../img/map.jpg");
-  background-position: 266px 139px, 0 0;
+  background-position: calc(50% - 300px) 139px, center 0;
   background-repeat: no-repeat;
 }
 
@@ -1185,11 +1184,14 @@ a:active+.drop-down-menu {
 }
 
 .map-contact-info {
+  position: absolute;
+  left: 50%;
   display: flex;
   flex-direction: column;
 
   width: 302px;
   margin: auto 27px;
+  margin-left: 270px;
   padding: 30px 25px;
   box-sizing: border-box;
 
@@ -1549,6 +1551,8 @@ p.offline-contacts {
   background-size: 18px 17px;
   background-repeat: no-repeat;
   border: none;
+
+  cursor: pointer;
 }
 
 .modal-feedback h2 {
@@ -1719,4 +1723,8 @@ p.offline-contacts {
 
 .modal-show {
   display: block;
+}
+
+.modal-flex-show {
+  display: flex;
 }
