@@ -20,8 +20,8 @@ if(popup) {
 
   link.addEventListener("click", function(evt) {
     evt.preventDefault();
-    popup.classList.add("modal-show");
-    wrapper.classList.add("modal-show");
+    popup.classList.add("modal-feedback-show");
+    wrapper.classList.add("modal-feedback-show");
 
     if (storage) {
       login.value = storage;
@@ -35,22 +35,22 @@ if(popup) {
 
   close.addEventListener("click", function(evt) {
     evt.preventDefault();
-    popup.classList.remove("modal-show");
-    wrapper.classList.remove("modal-show");
+    popup.classList.remove("modal-feedback-show");
+    wrapper.classList.remove("modal-feedback-show");
     wrapper.classList.remove("modal-error");
   });
 
   wrapper.addEventListener("click", function(evt) {
     evt.preventDefault();
-    popup.classList.remove("modal-show");
-    wrapper.classList.remove("modal-show");
+    popup.classList.remove("modal-feedback-show");
+    wrapper.classList.remove("modal-feedback-show");
     wrapper.classList.remove("modal-error");
   });
 
   document.addEventListener("keydown", function(evt) {
     if (evt.keyCode === 27) {
-      popup.classList.remove("modal-show");
-      wrapper.classList.remove("modal-show");
+      popup.classList.remove("modal-feedback-show");
+      wrapper.classList.remove("modal-feedback-show");
       wrapper.classList.remove("modal-error");
     }
   });
@@ -148,7 +148,7 @@ loginLink.addEventListener("mouseover", function(evt) {
 });
 
 var buyLink = document.querySelector(".buy-link-current");
-var modalPurchases = document.querySelector(".purchases-section");
+var modalPurchases = document.querySelector(".purchases-wrapper");
 
 if (modalPurchases) {
   buyLink.addEventListener("mouseover", function(evt) {
@@ -157,7 +157,7 @@ if (modalPurchases) {
     for (var i = 0; i < remove.length; i++) {
       remove[i].classList.remove("modal-show");
     }
-    modalPurchases.classList.add("modal-flex-show");
+    modalPurchases.classList.add("modal-show");
   });
 }
 

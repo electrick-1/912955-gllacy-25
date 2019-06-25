@@ -1665,8 +1665,12 @@ p.offline-contacts {
   display: block;
 }
 
-.purchases-section {
+.purchases-wrapper {
   display: none;
+}
+
+.purchases-section {
+  display: flex;
   flex-direction: column;
   align-items: flex-end;
   position: absolute;
@@ -1740,13 +1744,17 @@ p.offline-contacts {
   margin-top: 15px;
 }
 
-.buy-link-current:hover+.purchases-section,
-.buy-link-current:focus+.purchases-section,
-.buy-link-current:active+.purchases-section {
-  display: flex;
+.buy-link-current:hover+.purchases-wrapper,
+.buy-link-current:focus+.purchases-wrapper,
+.buy-link-current:active+.purchases-wrapper {
+  display: block;
 }
 
 .modal-show {
+  display: block;
+}
+
+.modal-feedback-show {
   display: block;
 
   animation: appearance 0.7s;
