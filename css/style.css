@@ -848,7 +848,7 @@ a:active+.drop-down-menu {
   color: #323232;
 
   background-color: #ffffff;
-  border:none
+  border:none;
 
   outline: none;
 }
@@ -1203,8 +1203,6 @@ a:active+.drop-down-menu {
 
 .map-contact-info p {
   margin: 0;
-
-
 }
 
 p.offline-contacts {
@@ -1439,6 +1437,33 @@ p.offline-contacts {
 }
 
 /* разметка попапов */
+
+@keyframes appearance {
+  0% {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+
+  70% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes error {
+  0%, 100% {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  50% {
+    background-color: rgba(255, 0, 0, 0.5);
+  }
+}
 
 .modal {
   display: block;
@@ -1723,6 +1748,12 @@ p.offline-contacts {
 
 .modal-show {
   display: block;
+
+  animation: appearance 0.7s;
+}
+
+.modal-error {
+  animation: error 0.5s;
 }
 
 .modal-flex-show {

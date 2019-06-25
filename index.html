@@ -64,11 +64,11 @@
             <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
               <p>
                 <label class="visually-hidden" for="login-email-field">Электронная почта</label>
-                <input type="email" name="login-email-field" placeholder="Электронная почта" id="login-email-field">
+                <input type="email" name="login-email-field" placeholder="Электронная почта" id="login-email-field" required>
               </p>
               <p>
                 <label class="visually-hidden" for="login-password-field">Пароль</label>
-                <input type="password" name="login-password-field" placeholder="Пароль" id="login-password-field">
+                <input type="password" name="login-password-field" placeholder="Пароль" id="login-password-field" required>
               </p>
               <button class="button" type="submit">Войти</button>
               <p>
@@ -285,16 +285,16 @@
       <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
         <p>
           <label class="visually-hidden" for="feedback-name-field">Как вас зовут?</label>
-          <input type="text" name="feedback-name-field" placeholder="Как вас зовут?" id="feedback-name-field">
+          <input type="text" name="feedback-name-field" placeholder="Как вас зовут?" id="feedback-name-field" required>
         </p>
         <p>
           <label class="visually-hidden" for="feedback-email-field">Ваша потча для ответа?</label>
-          <input type="email" name="feedback-email-field" placeholder="Ваша почта для ответа?" id="feedback-email-field">
+          <input type="email" name="feedback-email-field" placeholder="Ваша почта для ответа?" id="feedback-email-field" required>
         </p>
         <textarea class="feedback-text" name="feedback-text" rows="6" placeholder="Напишите что нибудь..."></textarea>
         <button class="button" type="submit">Отправить</button>
-        <button class="modal-close" type="button"></button>
       </form>
+      <button class="modal-close" type="button"></button>
     </section>
     <div class="feedback-wrapper">
     </div>

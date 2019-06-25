@@ -4,31 +4,73 @@ var wrapper = document.querySelector(".feedback-wrapper");
 
 if(popup) {
   var close = popup.querySelector(".modal-close");
+  var login = popup.querySelector("[name=feedback-name-field]");
+  var form = popup.querySelector(".feedback-form");
+  var email = popup.querySelector("[name=feedback-email-field]");
+  var text = popup.querySelector("[name=feedback-text]");
+
+  var isStorageSupport = true;
+  var storage = "";
+
+  try {
+    storage = localStorage.getItem("login");
+  } catch (err) {
+    isStorageSupport = false;
+  }
 
   link.addEventListener("click", function(evt) {
     evt.preventDefault();
     popup.classList.add("modal-show");
     wrapper.classList.add("modal-show");
+
+    if (storage) {
+      login.value = storage;
+      email.value = storage;
+      text.focus();
+    }
+    else {
+      login.focus();
+    }
   });
 
   close.addEventListener("click", function(evt) {
     evt.preventDefault();
     popup.classList.remove("modal-show");
     wrapper.classList.remove("modal-show");
+    wrapper.classList.remove("modal-error");
   });
 
   wrapper.addEventListener("click", function(evt) {
     evt.preventDefault();
     popup.classList.remove("modal-show");
     wrapper.classList.remove("modal-show");
+    wrapper.classList.remove("modal-error");
   });
 
   document.addEventListener("keydown", function(evt) {
     if (evt.keyCode === 27) {
       popup.classList.remove("modal-show");
       wrapper.classList.remove("modal-show");
+      wrapper.classList.remove("modal-error");
     }
   });
+
+  var button = form.querySelector("button");
+
+  button.addEventListener("click", function (evt) {
+    if (!login.value || !email.value || !text.value) {
+      evt.preventDefault();
+      wrapper.classList.remove("modal-error");
+      wrapper.offsetWidth = popup.offsetWidth;
+      wrapper.classList.add("modal-error");
+    }
+    else {
+      if (isStorageSupport) {
+        localStorage.setItem("login, login.value");
+        localStorage.setItem("email, email.value");
+      }
+    }
+  })
 };
 
 
@@ -69,35 +111,61 @@ var hoverMenu = document.querySelector(".navi-catalog");
 var dropMenu = document.querySelector(".drop-down-menu");
 
 hoverMenu.addEventListener("mouseover", function(evt) {
+  evt.preventDefault();
+  var remove = document.querySelectorAll(".modal-show");
+  for (var i = 0; i < remove.length; i++) {
+    remove[i].classList.remove("modal-show");
+  }
   dropMenu.classList.add("modal-show");
 });
 
 var searchLink = document.querySelector(".search-link");
 var modalSearch = document.querySelector(".modal-search");
+var searchLogin = modalSearch.querySelector("[name=search-field]");
 
 searchLink.addEventListener("mouseover", function(evt) {
+  evt.preventDefault();
+  var remove = document.querySelectorAll(".modal-show");
+  for (var i = 0; i < remove.length; i++) {
+    remove[i].classList.remove("modal-show");
+  }
   modalSearch.classList.add("modal-show");
+  searchLogin.focus();
 });
 
 var loginLink = document.querySelector(".login-link");
 var modalLogin = document.querySelector(".modal-login");
+var emailLogin = modalLogin.querySelector("[name=login-email-field]");
 
 loginLink.addEventListener("mouseover", function(evt) {
+  evt.preventDefault();
+  var remove = document.querySelectorAll(".modal-show");
+  for (var i = 0; i < remove.length; i++) {
+    remove[i].classList.remove("modal-show");
+  }
   modalLogin.classList.add("modal-show");
+  emailLogin.focus();
 });
 
 var buyLink = document.querySelector(".buy-link-current");
 var modalPurchases = document.querySelector(".purchases-section");
 
-buyLink.addEventListener("mouseover", function(evt) {
-  modalPurchases.classList.add("modal-flex-show");
-});
+if (modalPurchases) {
+  buyLink.addEventListener("mouseover", function(evt) {
+    evt.preventDefault();
+    var remove = document.querySelectorAll(".modal-show");
+    for (var i = 0; i < remove.length; i++) {
+      remove[i].classList.remove("modal-show");
+    }
+    modalPurchases.classList.add("modal-flex-show");
+  });
+}
 
 document.addEventListener("keydown", function(evt) {
   if (evt.keyCode === 27) {
-    dropMenu.classList.remove("modal-show");
-    modalSearch.classList.remove("modal-show");
-    modalLogin.classList.remove("modal-show");
-    modalPurchases.classList.remove("modal-flex-show");
+    var remove = document.querySelectorAll(".modal-show");
+    for (var i = 0; i < remove.length; i++) {
+      remove[i].classList.remove("modal-show");
+    }
   }
 });
