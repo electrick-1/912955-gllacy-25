@@ -142,6 +142,8 @@ a:active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   position: relative;
   margin-left: auto;
 }
@@ -241,6 +243,8 @@ path {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   width: 370px;
   padding: 0;
   margin: 0;
@@ -415,6 +419,8 @@ a:active+.drop-down-menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -461,6 +467,8 @@ a:active+.drop-down-menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -470,7 +478,6 @@ a:active+.drop-down-menu {
           justify-content: space-between;
   padding: 0;
   margin: 0;
-  margin-bottom: 40px;
 }
 
 .action {
@@ -485,6 +492,7 @@ a:active+.drop-down-menu {
   min-height: 229px;
   padding: 20px;
   margin: 0;
+  margin-bottom: 40px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 
@@ -516,6 +524,7 @@ a:active+.drop-down-menu {
 .raspberry {
   background-color: #930039;
   background-image: url("../img/raspberry.jpg");
+  background-size: cover;
 }
 
 .raspberry a {
@@ -525,6 +534,7 @@ a:active+.drop-down-menu {
 .choсolate {
   background-color: #411900;
   background-image: url("../img/choсolate.jpg");
+  background-size: cover;
 }
 
 .choсolate a {
@@ -830,6 +840,8 @@ display: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -868,6 +880,8 @@ display: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -1092,6 +1106,7 @@ display: none;
 
   background-color: #F2E8C9;
   background-image: url("../img/wafer.jpg");
+  background-size: cover;
   background-position: 0 0;
   background-repeat: repeat;
   border-radius: 15px;
@@ -1158,10 +1173,11 @@ display: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 40px;
 }
 
 .blog {
@@ -1180,9 +1196,11 @@ display: none;
 
   background-color: #ffffff;
   background-image: url("../img/strawberry.jpg");
+  background-size: cover;
   background-position: 0 0;
   background-repeat: no-repeat;
   border-radius: 15px;
+  margin-bottom: 40px;
 }
 
 .blog-title {
@@ -1227,9 +1245,11 @@ display: none;
   display: flex;
   width: 560px;
   min-height: 220px;
+  margin-bottom: 40px;
 
   background-color: #f8f7f4;
   background-image: url("../img/bg-post.svg");
+  background-size: cover;
   border-radius: 15px;
 }
 
@@ -1267,7 +1287,9 @@ display: none;
   height: 44px;
 
   margin: auto auto 0 0;
-  padding: 15px;
+  padding: 0;
+  padding-left: 15px;
+  vertical-align: middle;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 
@@ -1518,6 +1540,8 @@ p.offline-contacts {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 
   width: 200px;
   padding: 0;
@@ -1716,7 +1740,9 @@ p.offline-contacts {
 .feedback-text {
   height: 44px;
   margin: 0;
-  padding: 10px 15px;
+  padding: 0;
+  padding-left: 15px;
+  vertical-align: middle;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 
@@ -1812,7 +1838,7 @@ p.offline-contacts {
   right: 17px;
   width: 18px;
   height: 17px;
-  background-color: transparent;
+  background-color: red;
   background-image: url("../img/cross-big.svg");
   background-size: 18px 17px;
   background-repeat: no-repeat;
@@ -1835,6 +1861,7 @@ p.offline-contacts {
   width: 428px;
   min-height: 155px;
   margin: 0;
+  padding-top: 10px;
 }
 
 .modal-feedback .button {

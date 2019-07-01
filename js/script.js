@@ -33,25 +33,20 @@ if(popup) {
     }
   });
 
-  close.addEventListener("click", function(evt) {
+  var remove = function(evt) {
     evt.preventDefault();
     popup.classList.remove("modal-feedback-show");
     wrapper.classList.remove("modal-feedback-show");
     wrapper.classList.remove("modal-error");
-  });
+  }
 
-  wrapper.addEventListener("click", function(evt) {
-    evt.preventDefault();
-    popup.classList.remove("modal-feedback-show");
-    wrapper.classList.remove("modal-feedback-show");
-    wrapper.classList.remove("modal-error");
-  });
+  close.addEventListener("click", remove);
+
+  wrapper.addEventListener("click", remove);
 
   document.addEventListener("keydown", function(evt) {
     if (evt.keyCode === 27) {
-      popup.classList.remove("modal-feedback-show");
-      wrapper.classList.remove("modal-feedback-show");
-      wrapper.classList.remove("modal-error");
+      remove(evt);
     }
   });
 
