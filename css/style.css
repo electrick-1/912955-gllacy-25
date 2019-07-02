@@ -2072,7 +2072,7 @@ p.offline-contacts {
   -webkit-animation: appearance 0.7s;
 
           animation: appearance 0.7s;
-/
+}
 
 .modal-error {
   -webkit-animation: error 0.5s;
