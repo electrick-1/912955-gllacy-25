@@ -1531,9 +1531,11 @@ p.offline-contacts {
   display: flex;
   width: 1200px;
   margin: 0 auto;
+
   padding: 0 27px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  align-items: center;
 }
 
 .footer-social {
@@ -1544,14 +1546,15 @@ p.offline-contacts {
       flex-wrap: wrap;
 
   width: 200px;
-  padding: 0;
+  padding: 36px 0 36px;
   margin: 0;
 
   list-style: none;
 }
 
 .footer-social li {
-  margin: 36px 11px 29px 0px;
+  margin: 5px 0 5px 11px;
+
 }
 
 .social,
@@ -1596,7 +1599,7 @@ p.offline-contacts {
       flex-wrap: wrap;
 
   width: 350px;
-  margin: 35px 0px 29px 225px;
+  margin: 35px 0px 29px 235px;
   padding: 0;
 
 
@@ -1606,11 +1609,12 @@ p.offline-contacts {
 }
 
 .footer-info li {
-  width: 145px;
+  min-width: 145px;
+  padding-bottom: 5px;
 }
 
-.footer-info li:last-child {
-  width: 165px;
+.footer-info li:nth-child(4n) {
+  min-width: 165px;
 }
 
 .footer-info li:first-child {
@@ -1630,8 +1634,7 @@ p.offline-contacts {
 
 .footer-copyright {
   width: 190px;
-  margin: 18px 0 auto auto;
-  margin-top: 18px;
+  margin: 18px 0 25px auto;
 
   font-size: 12px;
   line-height: 18px;
