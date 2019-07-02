@@ -61,8 +61,8 @@ if(popup) {
     }
     else {
       if (isStorageSupport) {
-        localStorage.setItem("login, login.value");
-        localStorage.setItem("email, email.value");
+        localStorage.setItem(login, login.value);
+        localStorage.setItem(email, email.value);
       }
     }
   })
