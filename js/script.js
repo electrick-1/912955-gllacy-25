@@ -20,8 +20,8 @@ if(popup) {
 
   link.addEventListener("click", function(evt) {
     evt.preventDefault();
-    popup.classList.add("modal-feedback-show");
     wrapper.classList.add("modal-feedback-show");
+    popup.classList.add("modal-feedback-show");
 
     if (storage) {
       login.value = storage;

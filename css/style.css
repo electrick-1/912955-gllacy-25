@@ -1833,16 +1833,19 @@ p.offline-contacts {
 }
 
 .modal-close {
+  display: block;
   position: absolute;
+  padding: 0;
   top: 16px;
   right: 17px;
   width: 18px;
   height: 17px;
-  background-color: red;
   background-image: url("../img/cross-big.svg");
   background-size: 18px 17px;
+  background-position: 0 0;
   background-repeat: no-repeat;
   border: none;
+  background-color: transparent;
 
   cursor: pointer;
 }
@@ -2066,7 +2069,7 @@ p.offline-contacts {
   -webkit-animation: appearance 0.7s;
 
           animation: appearance 0.7s;
-}
+/
 
 .modal-error {
   -webkit-animation: error 0.5s;
