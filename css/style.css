@@ -120,7 +120,7 @@ a:active {
 .main-header {
   width: 1200px;
   margin: 0 auto;
-  padding: 7px 27px 0;
+  padding: 6px 27px 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -132,6 +132,8 @@ a:active {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
 .main-header-wrapper img {
@@ -145,11 +147,18 @@ a:active {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   position: relative;
+  margin: 0;
+  padding: 1px;
   margin-left: auto;
 }
 
 .user-navigation a {
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
   margin-left: 10px;
+  vertical-align: middle;
 
   border-radius: 17px;
   border-color: transparent;
@@ -157,8 +166,8 @@ a:active {
 
 .search-link {
   position: relative;
-  width: 33px;
-  height: 33px;
+  width: 32px;
+  height: 32px;
 
   background-color: rgba(255, 255, 255, 0.2);
 }
@@ -171,8 +180,10 @@ a:active {
 
 .login-link svg,
 .buy-link svg {
+  margin: 0;
+  padding: 0;
   position: absolute;
-  top: 8px;
+  top: 6px;
   left: 15px;
 }
 
@@ -183,14 +194,16 @@ path {
 .login-link,
 .buy-link {
   position: relative;
-  padding: 6px 17px 6px 40px;
+  padding: 7px 17px 8px 42px;
+  margin: 1px;
 
   background-color: rgba(255, 255, 255, 0.2);
 }
 
 .buy-link-current {
   position: relative;
-  padding: 6px 17px 6px 40px;
+  padding: 7px 17px 7px 42px;
+  margin: 1px;
 
   background-color: #f8f7f4;
   color: #323232;
@@ -207,7 +220,7 @@ path {
   width: 21px;
   height: 20px;
   position: absolute;
-  top: 8px;
+  top: 6px;
   left: 15px;
 }
 
@@ -288,8 +301,9 @@ path {
   border-radius: 20px;
   background-color: #d07058;
   color: #ffffff;
-  padding: 5px 10px;
+  padding: 6px 14px;
   margin: 0;
+  margin-left: -3px;
 }
 
 .drop-down-menu {
@@ -313,6 +327,7 @@ path {
 
 .drop-down-menu a {
   display: inline-block;
+  vertical-align: baseline;
   width: 103px;
   min-height: 16px;
   padding: 8px 20px;
@@ -397,7 +412,7 @@ a:active+.drop-down-menu {
 
 .info-time {
   margin: 0;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
   font-size: 14px;
   line-height: 16px;
   font-weight: 700;
@@ -439,7 +454,6 @@ a:active+.drop-down-menu {
 
 .breadcrumbs-item {
   position: relative;
-  margin-bottom: 4px;
 
   color: #ffffff;
 }
@@ -490,7 +504,7 @@ a:active+.drop-down-menu {
           flex-direction: column;
   width: 560px;
   min-height: 229px;
-  padding: 20px;
+  padding: 16px 21px 23px 19px;
   margin: 0;
   margin-bottom: 40px;
   -webkit-box-sizing: border-box;
@@ -511,14 +525,20 @@ a:active+.drop-down-menu {
 }
 
 .action p {
+  width: 513px;
+  margin: 0;
+  margin-top: 15px;
+
   font-size: 18px;
   line-height: 22px;
   font-weight: 700;
 }
 
 .action a {
-  display: inline-block;
-  margin: auto 0px 5px auto;
+  margin: auto 0 0 auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px 21px 13px 20px;
 }
 
 .raspberry {
@@ -528,7 +548,7 @@ a:active+.drop-down-menu {
 }
 
 .raspberry a {
-  width: 128px;
+  width: 165px;
 }
 
 .choсolate {
@@ -538,12 +558,11 @@ a:active+.drop-down-menu {
 }
 
 .choсolate a {
-  width: 152px;
+  width: 189px;
 }
 
 .page-title {
-  margin: 0;
-  margin-bottom: 11px;
+  margin: 2px 0 10px;
   padding: 0;
 
   font-size: 35px;
@@ -581,7 +600,7 @@ a:active+.drop-down-menu {
       -ms-flex-pack: end;
           justify-content: flex-end;
   position: relative;
-  min-height: 535px;
+  min-height: 515px;
 }
 
 .slider-list .slide-show {
@@ -592,7 +611,7 @@ a:active+.drop-down-menu {
 
 .slider-item img {
   position: absolute;
-  top: -120px;
+  top: -118px;
   z-index: -1;
 }
 
@@ -610,7 +629,7 @@ a:active+.drop-down-menu {
 
 .slider-list h2 {
   width: 675px;
-  margin: 284px  auto 0;
+  margin: 275px  auto 0;
   font-size: 60px;
   line-height: 60px;
   font-weight: 700;
@@ -643,7 +662,7 @@ a:active+.drop-down-menu {
       -ms-flex-pack: justify;
           justify-content: space-between;
   position: absolute;
-  bottom: 63px;
+  bottom: 61px;
   z-index: 2;
 }
 
@@ -652,14 +671,11 @@ a:active+.drop-down-menu {
   width: 19px;
   height: 19px;
 
+  background-color: transparent;
   border: 2px solid #ffffff;
   border-radius: 50%;
 
   cursor: pointer;
-}
-
-.slider-controls label {
-  background-color: transparent;
 }
 
 .slider-controls input:checked+label {
@@ -669,6 +685,10 @@ a:active+.drop-down-menu {
 .slider-controls input:hover+label,
 .slider-controls input:focus+label {
   background-color: rgba(248,247,244, 0.4)
+}
+
+.slider-controls input:active+label {
+    background-color: #ffffff;
 }
 
 .filter-form {
@@ -682,7 +702,7 @@ a:active+.drop-down-menu {
       -ms-flex-direction: row;
           flex-direction: row;
   width: 900px;
-  margin-bottom: 40px;
+  margin-bottom: 37px;
 }
 
 .filter-item ul {
@@ -712,15 +732,15 @@ a:active+.drop-down-menu {
 }
 
 .filter-item {
-  margin-top: 10px;
+  margin-top: 12px;
   margin-right: 14px;
 }
 
 .filter-sort {
   width: 194px;
-  padding: 10px 0px 10px 16px;
+  padding: 8px 0px 9px 16px;
   margin: 0;
-  margin-top: 6px;
+  margin-top: 5px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 
@@ -754,8 +774,6 @@ select::-ms-expand {
 display: none;
 }
 
-/* в обычном состоянии стрелкав select должна быть больше по макету, а при выбранном состоянии черная стрелка должна быть меньше по макету. Так же непонятно как сделать постоянно активное состояние пока выбираешь нудный пункт */
-
 .filter-sort option {
   font-size: 14px;
   line-height: 16px;
@@ -770,6 +788,7 @@ display: none;
 .price-controls label {
   position: relative;
   display: inline-block;
+  vertical-align: baseline;
 
   cursor: pointer;
 }
@@ -799,7 +818,7 @@ display: none;
 
 .range-controls {
   position: relative;
-  padding: 17px 22px 16px;
+  padding: 15px 22px 15px;
   margin-top: 6px;
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 20px;
@@ -819,13 +838,11 @@ display: none;
 
 .range-toggle {
   position: absolute;
-  top: 9px;
+  top: 8px;
 
   width: 20px;
   height: 20px;
   background-image: url("../img/filter-button.svg");
-
-  cursor: pointer;
 }
 
 .range-toggle-min {
@@ -834,6 +851,13 @@ display: none;
 
 .range-toggle-max {
   left: 133px;
+}
+
+.range-toggle:hover {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+  cursor: pointer;
 }
 
 .filter-fats-list {
@@ -846,7 +870,7 @@ display: none;
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 415px;
-  padding: 10px 17px 10px 46px;
+  padding: 8px 17px 9px 46px;
   border-radius: 20px;
   background-color: rgba(255, 255, 255, 0.2);
   -webkit-box-sizing: border-box;
@@ -866,8 +890,8 @@ display: none;
   width: 22px;
   height: 22px;
   background-size: 22px 22px;
-  top: -2px;
-  left: -35px;
+  top: 0px;
+  left: -32px;
   opacity: 0.8;
 }
 
@@ -1004,7 +1028,7 @@ display: none;
   position: relative;
   width: 267px;
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: 38px;
   padding: 0;
 }
 
@@ -1018,7 +1042,7 @@ display: none;
 
 .catalog-item p {
   position: absolute;
-  top: 214px;
+  top: 209px;
   margin: 0;
   padding: 0;
 }
@@ -1045,7 +1069,8 @@ display: none;
 }
 
 .catalog-item h2 {
-  margin: 0;
+  width: 257px;
+  margin: 7px auto 0 auto;
   padding: 0;
 
   font-size: 16px;
@@ -1121,7 +1146,7 @@ display: none;
 }
 
 .about-list {
-  margin: 0 23px 0 77px;
+  margin: 0 22px 0 76px;
   padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1147,8 +1172,8 @@ display: none;
 .about-item::before {
   content: "";
   position: absolute;
-  top: -16px;
-  left: -57px;
+  top: -14px;
+  left: -56px;
   width: 49px;
   height: 49px;
 }
@@ -1204,7 +1229,7 @@ display: none;
 }
 
 .blog-title {
-  margin: 23px auto 7px 20px;
+  margin: 23px auto 5px 20px;
 
   font-size: 16px;
   line-height: 22px;
@@ -1213,7 +1238,7 @@ display: none;
 
 .blog-info {
   width: 290px;
-  margin: 7px auto auto 20px;
+  margin: 0 auto auto 20px;
   padding: 0;
   border: none;
 }
@@ -1391,8 +1416,8 @@ display: none;
           flex-direction: column;
 
   width: 302px;
-  margin: 63px 27px 0 270px;
-  padding: 30px 25px;
+  margin: 63px 0 0 270px;
+  padding: 27px 27px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 
@@ -1403,37 +1428,43 @@ display: none;
   vertical-align: center;
 }
 
-.map-contact-info p {
+.offline-contacts {
   margin: 0;
 }
 
-p.offline-contacts {
-  margin-bottom: 17px;
-}
-
-.offline-contacts {
+.offline-address-info {
+  display: block;
+  width: 150px;
   font-size: 14px;
   line-height: 20px;
+  font-weight: 400;
+  margin-bottom: 3px;
 }
 
-.offline-contacts span {
+.offline-contacts-address {
+  display: block;
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
+  margin-bottom: 17px;
 }
 
 .online-contacts {
+  margin: 0;
   font-size: 14px;
   line-height: 20px;
 }
 
 .online-contacts-phone {
+  display: block;
+  margin-top: 7px;
   font-size: 18px;
   line-height: 22px;
   font-weight: 700;
 }
 
 .online-contacts-worktime {
+  display: block;
   font-size: 14px;
   line-height: 22px;
 }
@@ -1447,6 +1478,20 @@ p.offline-contacts {
   color: #fefefe;
 }
 
+.paginator-wrapper {
+  display: flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  width: 190px;
+  margin: 45px 0 34px auto;
+  padding: 0;
+}
+
+.paginator-wrapper a {
+  text-decoration: none;
+  border-color: transparent;
+}
+
 .pagination-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1454,10 +1499,10 @@ p.offline-contacts {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 190px;
+  width: 145px;
   list-style: none;
-  margin: 87px 0 38px auto;
   padding: 0;
+  margin: 0;
 }
 
 .pagination-item a {
@@ -1491,7 +1536,7 @@ p.offline-contacts {
 .pagination-item-current a:hover,
 .pagination-item-current a:focus {
   margin: 0;
-  padding: 4px 9px 3px 8px;
+  padding: 4px 8px 2px 10px;
   border-radius: 50%;
   background-color: #ffffff;
 
@@ -1505,8 +1550,8 @@ p.offline-contacts {
   background-color: none;
 }
 
-.paginator-next a {
-  border-color: transparent;
+.paginator-next {
+  padding-left: 15px;
 }
 
 .paginator-next:active path {
@@ -1535,7 +1580,9 @@ p.offline-contacts {
   padding: 0 27px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .footer-social {
@@ -1553,7 +1600,7 @@ p.offline-contacts {
 }
 
 .footer-social li {
-  margin: 5px 0 5px 11px;
+  margin: 0 11px 11px 0;
 
 }
 
@@ -1599,7 +1646,7 @@ p.offline-contacts {
       flex-wrap: wrap;
 
   width: 350px;
-  margin: 35px 0px 29px 235px;
+  margin: 13px 0px 29px 222px;
   padding: 0;
 
 
@@ -1609,7 +1656,7 @@ p.offline-contacts {
 }
 
 .footer-info li {
-  min-width: 145px;
+  min-width: 143px;
   padding-bottom: 5px;
 }
 
@@ -1625,6 +1672,7 @@ p.offline-contacts {
   content: "";
   position: absolute;
   left: -22px;
+  top: 3px;
 
   width: 15px;
   height: 13px;
@@ -1634,7 +1682,7 @@ p.offline-contacts {
 
 .footer-copyright {
   width: 190px;
-  margin: 18px 0 25px auto;
+  margin: 0 0 33px auto;
 
   font-size: 12px;
   line-height: 18px;
@@ -1645,6 +1693,8 @@ p.offline-contacts {
 .footer-logo:hover,
 .footer-logo:focus,
 .footer-logo:active {
+  margin-left: 3px;
+  display: block;
   border-color: transparent;
 }
 
@@ -2036,6 +2086,7 @@ p.offline-contacts {
 
 .remove-cross {
   display: inline-block;
+  vertical-align: middle;
   width: 11px;
   height: 11px;
 
